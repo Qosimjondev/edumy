@@ -73,7 +73,7 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-    public$layout='template';
+
     public function actionIndex()
     {
         return $this->render('index');
