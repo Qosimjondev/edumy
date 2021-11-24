@@ -17,7 +17,7 @@ MainAsset::register($this);
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="keywords" content="academy, college, coursera, courses, education, elearning, kindergarten, lms, lynda, online course, online education, school, training, udemy, university">
-    <meta name="description" content="Edumy - LMS Online Education Course & School HTML Template">
+    <meta name="description" content="Edumy - LMS Online Education Course & School">
     <meta name="CreativeLayers" content="ATFN">
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title)?></title>
@@ -35,7 +35,11 @@ MainAsset::register($this);
     echo $this->render("header");
     echo $this->render("modal");
     echo $this->render("navmobile");
-    echo $this->render('slider');
+
+    if (Yii::$app->controller->route == 'site/index'){
+
+        echo $this->render('slider');
+    }
 
     echo $content;
     ?>

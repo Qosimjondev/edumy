@@ -31,6 +31,8 @@ class MainAsset extends \yii\web\AssetBundle
         'js/progressbar.js',
         'js/slider.js',
         'js/timepicker.js',
+        'js/googlemaps1.js',
+        "https://maps.googleapis.com/maps/api/js?key=AIzaSyAAz77U5XQuEME6TpftaMdX0bBelQxXRlM&amp;callback=initMap",
         'js/script.js',
     ];
     public $depends = [

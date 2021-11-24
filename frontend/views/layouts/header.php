@@ -110,7 +110,7 @@ use yii\helpers\Url;
                     </ul>
                 </li>
                 <li class="last">
-                    <a href="page-contact.html"><span class="title">Contact</span></a>
+                    <a href="<?=Url::to(['site/contact'])?>"><span class="title">Contact</span></a>
                 </li>
             </ul>
             <ul class="sign_up_btn pull-right dn-smd mt20">
