@@ -257,4 +257,15 @@ class SiteController extends Controller
             'model' => $model
         ]);
     }
+    public function actionSingleCourse($id){
+      return  $this->render('page-course-single');
+    }
+    public function actionInstructors(){
+
+        return $this->render('page-instructors');
+    }
+
+    public function actionSingleInstructors(){
+        return $this->render('page-instructors-single');
+    }
 }

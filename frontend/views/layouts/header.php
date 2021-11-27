@@ -42,16 +42,8 @@ use yii\helpers\Url;
                                 <li><a href="page-course-v3.html">Courses v3</a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="#">Courses Single</a>
-                            <!-- Level Three-->
-                            <ul>
-                                <li><a href="page-course-single-v1.html">Single V1</a></li>
-                                <li><a href="page-course-single-v2.html">Single V2</a></li>
-                                <li><a href="page-course-single-v3.html">Single V3</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="page-instructors.html">Instructors</a></li>
+
+                        <li><a href="<?=Url::to(['site/instructors'])?>">Instructors</a></li>
                         <li><a href="page-instructors-single.html">Instructor Single</a></li>
                     </ul>
                 </li>

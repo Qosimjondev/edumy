@@ -4,22 +4,16 @@
 /* @var $form yii\bootstrap4\ActiveForm */
 /* @var $model \frontend\models\ContactForm */
 
-use yii\bootstrap4\Breadcrumbs;
 use yii\bootstrap4\Html;
 use yii\bootstrap4\ActiveForm;
 use yii\captcha\Captcha;
 
 $this->title = 'Contact Us';
-//$this->params['breadcrumbs'][] = ['label' => 'Login','url'=>['site/login']];
+//$this->params['breadcrumbs'][] = ['label' => 'Login', 'url'=>['site/login']];
 $this->params['breadcrumbs'][] = $this->title;
 
 
 ?>
-
-
-
-	<!-- Inner Page Breadcrumb -->
-
 
 	<!-- How It's Work -->
 	<section class="our-contact">

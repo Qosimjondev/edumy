@@ -168,7 +168,7 @@ $this->title = 'Edumy';
                                     <div class="overlay">
                                         <div class="tag">Best Seller</div>
                                         <div class="icon"><span class="flaticon-like"></span></div>
-                                        <a class="tc_preview_course" href="#">Preview Course</a>
+                                        <a class="tc_preview_course" href="<?=Url::to(['site/single-course', 'id'=>1])?>">Preview Course</a>
                                     </div>
                                 </div>
                                 <div class="details">
