@@ -15,3 +15,30 @@
     /*flex-grow: 7;*/
     background-color: #fff
 }
+.create-form
+{
+    /*margin: 0 auto;*/
+    border: 1px solid black;
+
+}
+.field-video-file .form-label
+{
+    display: none;
+}
+.content main
+{
+    padding-top: 20px;
+}
+.summary
+{
+    display: none;
+}
+/*.field-video-title, .field-video-description*/
+/*{*/
+/*    padding-top: 40px;*/
+
+/*}*/
+/*.field-video-title label, .field-video-description label*/
+/*{*/
+/*    line-height: 40px!important;*/
+/*}*/
