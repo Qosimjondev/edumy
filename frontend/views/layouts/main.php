@@ -62,7 +62,7 @@ MainAsset::register($this);
         <?php endif; ?>
 
 
-        <?=$content?>
+        <?= $content ?>
 
 
         <!-- Our Footer -->

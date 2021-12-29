@@ -10,11 +10,15 @@ return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
+    'name'=>'Education.uz',
     'bootstrap' => ['log'],
     'modules' => [],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
+        ],
+        'sidebar'=>[
+            'class'=>'SidebarComponents',
         ],
         'user' => [
             'identityClass' => 'common\models\User',
@@ -37,14 +41,16 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
+
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
-        */
+        'assetManager'=>[
+            'appendTimestamp'=>true,
+        ],
     ],
     'params' => $params,
 ];
