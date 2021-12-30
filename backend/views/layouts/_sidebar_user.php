@@ -14,33 +14,28 @@ $this->title='Education';
         <ul class="sidebar-nav">
             <li class="sidebar-item active">
                 <a class="sidebar-link" href="<?= Url::to(['site/index'])?>">
-                    <i class="align-middle" data-feather="grid"></i> <span class="align-middle">Dashboard</span>
+                    <i class="align-middle" data-feather="book"></i> <span class="align-middle">Mening kurslarim</span>
                 </a>
             </li>
 
             <li class="sidebar-item">
                 <a class="sidebar-link" href="<?= Url::to(['/video/index'])?>">
-                    <i class="align-middle" data-feather="video"></i> <span class="align-middle">Video</span>
+                    <i class="align-middle" data-feather="list"></i> <span class="align-middle">Barchalar kurslar</span>
                 </a>
             </li>
 
             <li class="sidebar-item">
                 <a class="sidebar-link" href="#">
-                    <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Sign In</span>
+                    <i class="align-middle" data-feather="file"></i> <span class="align-middle">Sertifikatlar</span>
                 </a>
             </li>
 
             <li class="sidebar-item">
                 <a class="sidebar-link" href="#">
-                    <i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Sign Up</span>
+                    <i class="align-middle" data-feather="user"></i> <span class="align-middle">Shaxsiy profil</span>
                 </a>
             </li>
 
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="#">
-                    <i class="align-middle" data-feather="book"></i> <span class="align-middle">Blank</span>
-                </a>
-            </li>
         </ul>
     </div>
 </nav>

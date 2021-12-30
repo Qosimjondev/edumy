@@ -27,7 +27,7 @@ AppAsset::register($this);
     <?php $this->beginBody() ?>
     <div class="wrapper">
 
-        <?php echo $this->render('_header') ?>
+        <?php echo $this->render('_sidebar_user') ?>
 
         <div class="main">
             <nav class="navbar navbar-expand navbar-light navbar-bg">
@@ -50,7 +50,12 @@ AppAsset::register($this);
 <!--                                <a class="dropdown-item" href="index.html"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>-->
 <!--                                <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>-->
 <!--                                <div class="dropdown-divider"></div>-->
-                                <a class="dropdown-item" href="#">Log out</a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="align-middle" data-feather="user"></i>   Shaxsiy cabinet
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="align-middle" data-feather="log-out"></i> Log out
+                                </a>
                             </div>
                         </li>
                     </ul>
