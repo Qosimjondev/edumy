@@ -2,8 +2,8 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'Mening kurslarim';
+$this->title = 'Barcha kurslarim';
 ?>
 <div class="site-index">
-    <h1> Mening kurslarim</h1>
+    <h1> Barcha kurslar</h1>
 </div>

@@ -19,20 +19,14 @@ $this->title='Education';
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="<?= Url::to(['/video/index'])?>">
-                    <i class="align-middle" data-feather="list"></i> <span class="align-middle">Barchalar kurslar</span>
+                <a class="sidebar-link" href="<?= Url::to(['site/courses'])?>">
+                    <i class="align-middle" data-feather="list"></i> <span class="align-middle">Barcha kurslar</span>
                 </a>
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="#">
+                <a class="sidebar-link" href="<?= Url::to(['site/my-sertificate'])?>">
                     <i class="align-middle" data-feather="file"></i> <span class="align-middle">Sertifikatlar</span>
-                </a>
-            </li>
-
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="#">
-                    <i class="align-middle" data-feather="user"></i> <span class="align-middle">Shaxsiy profil</span>
                 </a>
             </li>
 
