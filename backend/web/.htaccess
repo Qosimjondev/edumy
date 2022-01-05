@@ -1,4 +1,5 @@
 RewriteEngine on
+RewriteBase /admin
 
 # Если запрашиваемая в URL директория или файл существуют обращаемся к ним напрямую
 RewriteCond %{REQUEST_FILENAME} !-f

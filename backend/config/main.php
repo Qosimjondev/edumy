@@ -16,6 +16,8 @@ return [
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
+            'baseUrl'=>'/admin',
+
         ],
         'sidebar'=>[
             'class'=>'SidebarComponents',
@@ -46,6 +48,7 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'baseUrl'=>'/admin',
             ],
         ],
         'assetManager'=>[
