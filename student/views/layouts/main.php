@@ -3,10 +3,10 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use backend\assets\AppAsset;
+use student\assets\AppAsset;
 
 AppAsset::register($this);
-$this->beginContent('@backend/views/layouts/base.php');
+$this->beginContent('@student/views/layouts/base.php');
 ?>
     <main role="main" class="flex-shrink-0">
             <?= $content ?>

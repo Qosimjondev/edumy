@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\controllers;
+namespace teacher\controllers;
 
 use common\models\Video;
 use yii\base\Security;

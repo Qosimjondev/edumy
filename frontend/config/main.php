@@ -43,7 +43,12 @@ return [
             'showScriptName' => false,
             'rules' => [
                 'baseUrl'=>'',
+                '/<action>'=>'site/<action>',
+                '/<action>/<id>'=>'site/<action>'
             ],
+        ],
+        'assetManager'=>[
+            'appendTimestamp'=>true,
         ],
 
     ],

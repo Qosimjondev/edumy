@@ -20,7 +20,7 @@ use yii\helpers\Url;
             </div>
             <a href="#" class="navbar_brand float-left dn-smd">
                 <img class="logo1 img-fluid" src="<?= Url::base()?>/images/header-logo.png" alt="header-logo.png">
-                <img class="logo2 img-fluid" src="<?= Url::base()?>//images/header-logo2.png" alt="header-logo2.png">
+                <img class="logo2 img-fluid" src="<?= Url::base()?>/images/header-logo2.png" alt="header-logo2.png">
                 <span>edumy</span>
             </a>
             <!-- Responsive Menu Structure-->

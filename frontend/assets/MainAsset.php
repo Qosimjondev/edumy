@@ -11,6 +11,17 @@ class MainAsset extends \yii\web\AssetBundle
         'css/bootstrap.min.css',
         'css/style.css',
         'css/responsive.css',
+        [
+            'href' => 'images/favicon.ico',
+            'rel' => 'shortcut icon',
+            'sizes' => '128x128',
+            'type'=>'image/x-icon'
+        ],
+        [
+            'href' => 'images/favicon.ico',
+            'rel' => 'shortcut icon',
+            'sizes' => '128x128',
+        ],
     ];
     public $js = [
         'js/jquery-3.3.1.js',
@@ -34,9 +45,5 @@ class MainAsset extends \yii\web\AssetBundle
         'js/googlemaps1.js',
         "https://maps.googleapis.com/maps/api/js?key=AIzaSyAAz77U5XQuEME6TpftaMdX0bBelQxXRlM&amp;callback=initMap",
         'js/script.js',
-    ];
-    public $depends = [
-        'yii\web\YiiAsset',
-        'yii\bootstrap4\BootstrapAsset',
     ];
 }
