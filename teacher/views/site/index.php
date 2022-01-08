@@ -3,6 +3,7 @@
 /* @var $this yii\web\View */
 
 $this->title = 'Dashboard';
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">

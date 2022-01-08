@@ -8,6 +8,7 @@ use yii\bootstrap4\Breadcrumbs;
         <h4 class="title float-left"><?= $this->title ?></h4>
         <?= Breadcrumbs::widget([
             'navOptions' => ['aria-label' => 'breadcrumb', 'class' => 'float-right'],
+            'options' => ['class' => 'breadcrumb'],
             'itemTemplate' => "<li class='breadcrumb-item'>{link}</li>\n", // template for all links
             'homeLink' => [
                 'label' => 'Home',

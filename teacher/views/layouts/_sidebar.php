@@ -2,7 +2,6 @@
 
 use yii\helpers\Html;
 use yii\helpers\Url;
-$this->title='Education';
 ?>
 <!-- Our Dashbord Sidebar -->
 <section class="dashboard_sidebar dn-1199">

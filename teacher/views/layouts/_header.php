@@ -1,8 +1,6 @@
 <?php
 
-use yii\helpers\Html;
 use yii\helpers\Url;
-$this->title='Education';
 ?>
 <!-- Main Header Nav -->
 <header class="header-nav menu_style_home_one dashbord_pages navbar-scrolltofixed stricky main-menu">

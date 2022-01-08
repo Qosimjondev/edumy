@@ -34,6 +34,10 @@ return [
         'setWritable' => [
             'backend/runtime',
             'backend/web/assets',
+            'teacher/runtime',
+            'teacher/web/assets',
+            'student/runtime',
+            'student/web/assets',
             'console/runtime',
             'frontend/runtime',
             'frontend/web/assets',
@@ -44,6 +48,8 @@ return [
         ],
         'setCookieValidationKey' => [
             'backend/config/main-local.php',
+            'teacher/config/main-local.php',
+            'student/config/main-local.php',
             'common/config/codeception-local.php',
             'frontend/config/main-local.php',
         ],
@@ -53,6 +59,10 @@ return [
         'setWritable' => [
             'backend/runtime',
             'backend/web/assets',
+            'teacher/runtime',
+            'teacher/web/assets',
+            'student/runtime',
+            'student/web/assets',
             'console/runtime',
             'frontend/runtime',
             'frontend/web/assets',
@@ -62,6 +72,8 @@ return [
         ],
         'setCookieValidationKey' => [
             'backend/config/main-local.php',
+            'teacher/config/main-local.php',
+            'student/config/main-local.php',
             'frontend/config/main-local.php',
         ],
     ],

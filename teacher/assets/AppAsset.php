@@ -45,7 +45,6 @@ class AppAsset extends AssetBundle
         'js/chart-custome.js',
 
         'js/bootstrap-select.min.js',
-        'js/isotop.js',
         'js/snackbar.min.js',
         'js/simplebar.js',
         'js/parallax.js',
@@ -56,7 +55,7 @@ class AppAsset extends AssetBundle
         'js/progressbar.js',
         'js/slider.js',
         'js/timepicker.js',
-
+        'js/wow.min.js',
         'js/dashboard-script.js',
 
         'js/script.js',
