@@ -2,7 +2,9 @@
 
 namespace frontend\assets;
 
-class MainAsset extends \yii\web\AssetBundle
+use yii\web\AssetBundle;
+
+class MainAsset extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
@@ -43,7 +45,8 @@ class MainAsset extends \yii\web\AssetBundle
         'js/slider.js',
         'js/timepicker.js',
         'js/googlemaps1.js',
-        "https://maps.googleapis.com/maps/api/js?key=AIzaSyAAz77U5XQuEME6TpftaMdX0bBelQxXRlM&amp;callback=initMap",
         'js/script.js',
+        "https://maps.googleapis.com/maps/api/js?key=AIzaSyAAz77U5XQuEME6TpftaMdX0bBelQxXRlM&amp;callback=initMap",
+
     ];
 }

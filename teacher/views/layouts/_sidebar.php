@@ -16,8 +16,8 @@ use yii\helpers\Url;
             </div>
             <div class="dashbord_nav_list">
                 <ul>
-                    <li class="active"><a href="page-dashboard.html"><span class="flaticon-puzzle-1"></span> Dashboard</a></li>
-                    <li><a href="page-my-courses.html"><span class="flaticon-online-learning"></span> My Courses</a></li>
+                    <li class="active"><a href="<?= Url::home()?>"><span class="flaticon-puzzle-1"></span> Dashboard</a></li>
+                    <li><a href="<?=Url::to(['courses/index'])?>"><span class="flaticon-online-learning"></span> My Courses</a></li>
                     <li><a href="page-my-order.html"><span class="flaticon-shopping-bag-1"></span> Order</a></li>
                     <li><a href="page-my-message.html"><span class="flaticon-speech-bubble"></span> Messages</a></li>
                     <li><a href="page-my-review.html"><span class="flaticon-rating"></span> Reviews</a></li>

@@ -3,7 +3,6 @@
 use yii\helpers\Url;
 
 $this->title = 'Courses';
-//$this->params['breadcrumbs'][] = ['label' => 'Login', 'url'=>['site/login']];
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>

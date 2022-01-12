@@ -1,8 +1,16 @@
+Options -Indexes
+IndexIgnore */*
+
+Options FollowSymLinks
+
+# If a directory or a file exists, use the request directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+
 # NEW CODES HERE
 RewriteEngine On
 
-# End the processing, if a rewrite already occurred
-RewriteRule ^(frontend|backend)/web/ - [L]
 
 # Handle the case of backend, skip ([S=1]) the following rule, if current matched
 
@@ -16,10 +24,4 @@ RewriteRule ^student(/.+)?$ student/web/$1 [L,PT]
 RewriteRule ^student/(.+)?$ student/web/$1 [L,PT]
 
 # handle the case of frontend
-RewriteRule .* frontend/web/$0
-
-# Uncomment the following, if you want speaking URL
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^/]+/web)/.*$ $1/index.php
-
+RewriteRule ^(.+)?$ frontend/web/$1

@@ -44,7 +44,7 @@ return [
             'rules' => [
                 'baseUrl'=>'',
                 '/<action>'=>'site/<action>',
-                '/<action>/<id>'=>'site/<action>'
+//                '/<action>/<id>'=>'site/<action>'
             ],
         ],
         'assetManager'=>[

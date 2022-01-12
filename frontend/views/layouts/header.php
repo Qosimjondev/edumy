@@ -10,15 +10,15 @@ use yii\helpers\Url;
         <nav>
             <!-- Menu Toggle btn-->
             <div class="menu-toggle">
-                <img class="nav_logo_img img-fluid" src="   images/header-logo3.png" alt="header-logo3.png">
+                <img class="nav_logo_img img-fluid" src="<?=Url::base()?>/images/header-logo3.png" alt="header-logo3.png">
                 <button type="button" id="menu-btn">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
             </div>
-            <a href="#" class="navbar_brand float-left dn-smd">
-                <img class="logo1 img-fluid" src="images/header-logo2.png" alt="header-logo2.png">
+            <a href="<?=Url::home()?>" class="navbar_brand float-left dn-smd">
+                <img class="logo1 img-fluid" src="<?=Url::base()?>/images/header-logo2.png" alt="header-logo2.png">
                 <span>edumy</span>
             </a>
             <!-- Responsive Menu Structure-->
@@ -98,7 +98,7 @@ use yii\helpers\Url;
                                                                         <div class="col-lg-5 p0">
                                                                             <div class="element-img-widget-wrapper">
                                                                                 <div class="element-widget-thumb">
-                                                                                    <a href="#"><img class="img-fluid" src="images/resource/1.png" alt="1.png"></a>
+                                                                                    <a href="#"><img class="img-fluid" src="<?=Url::base()?>/images/resource/1.png" alt="1.png"></a>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -151,7 +151,7 @@ use yii\helpers\Url;
                     <a href="#"><span class="title">Yordam</span></a>
                 </li>
                 <li class="list_two">
-                    <a href="#"><span class="title">Bog'lanish</span></a>
+                    <a href="<?=Url::to(['site/contact'])?>"><span class="title">Bog'lanish</span></a>
                 </li>
                 <li class="list_one">
                     <a href="#"><span class="title">Kirish</span></a>
