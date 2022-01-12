@@ -22,7 +22,7 @@ use yii\helpers\Url;
                     <li><a href="page-my-message.html"><span class="flaticon-speech-bubble"></span> Messages</a></li>
                     <li><a href="page-my-review.html"><span class="flaticon-rating"></span> Reviews</a></li>
                     <li><a href="page-my-bookmarks.html"><span class="flaticon-like"></span> Bookmarks</a></li>
-                    <li><a href="page-my-listing.html"><span class="flaticon-add-contact"></span> Add listing</a></li>
+                    <li><a href="<?php echo Url::to(['video/create'])?>"><span class="flaticon-add-contact"></span> Add listing</a></li>
                 </ul>
                 <h4>Account</h4>
                 <ul>

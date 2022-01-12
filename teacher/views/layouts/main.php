@@ -26,7 +26,7 @@ $this->beginContent('@teacher/views/layouts/base.php');
                         <?=$this->render('dashboard/breadcrumb'); ?>
                         <?= $content ?>
                     </div>
-                     <?=$this->render('dashboard/footer'); ?>
+<!--                        --><?//=$this->render('dashboard/footer'); ?>
                 </div>
             </div>
         </div>
