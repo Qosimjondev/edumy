@@ -142,10 +142,10 @@ use yii\helpers\Url;
 
             <ul id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">
                 <li class="last">
-                    <a href="page-contact.html"><span class="flaticon-edit">Ro'yxatdan O'tish</span></a>
+                    <a href="page-contact.html"><i class="flaticon-edit"></i> Ro'yxatdan O'tish</a>
                 </li>
                 <li class="list_five">
-                    <a href="#"><span class="flaticon-user">Kirish</span></a>
+                    <a href="<?=Url::to(['site/login'])?>"><i class="flaticon-user"></i> Kirish</a>
                 </li>
                 <li class="list_three">
                     <a href="#"><span class="title">Yordam</span></a>
