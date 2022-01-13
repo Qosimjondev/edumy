@@ -13,9 +13,8 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
 
     public $css = [
-        'css/bootstrap.min.css',
         'css/style.css',
-
+        'css/fileuploader.css',
         'css/dashbord_navitaion.css',
 
         'css/responsive.css',
@@ -23,7 +22,7 @@ class AppAsset extends AssetBundle
             'href' => 'images/favicon.ico',
             'rel' => 'shortcut icon',
             'sizes' => '128x128',
-            'type'=>'image/x-icon'
+            'type' => 'image/x-icon'
         ],
         [
             'href' => 'images/favicon.ico',
@@ -33,7 +32,6 @@ class AppAsset extends AssetBundle
 
     ];
     public $js = [
-        '../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js',
         'js/jquery-3.3.1.js',
         'js/jquery-migrate-3.0.0.min.js',
         'js/popper.min.js',
@@ -59,5 +57,9 @@ class AppAsset extends AssetBundle
         'js/dashboard-script.js',
 
         'js/script.js',
+    ];
+    public $depends = [
+        'yii\web\YiiAsset',
+        'yii\bootstrap4\BootstrapAsset',
     ];
 }
