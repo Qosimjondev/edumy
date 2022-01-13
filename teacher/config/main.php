@@ -11,6 +11,7 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'teacher\controllers',
     'name'=>'Education.uz',
+    'defaultRoute'=>'site/index',
     'bootstrap' => ['log'],
     'modules' => [],
     'components' => [

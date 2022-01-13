@@ -968,7 +968,7 @@ header.header-nav a.navbar_brand .logo2{
 }
 header.header-nav.menu_style_home_one.dashbord_pages{
   background-image: -moz-linear-gradient( 0deg, rgb(52,82,255) 0%, rgb(255,16,83) 100%);
-  background-image: -webkit-linear-gradient( 0deg, rgb(52,82,255) 0%, rgb(255,16,83) 100%);
+  background-image: -webkit-linear-gradient( 3deg, #e6d16c, #16014c 100%);
   background-image: -ms-linear-gradient( 0deg, rgb(52,82,255) 0%, rgb(255,16,83) 100%);
 }
 header.header-nav.menu_style_home_one{
@@ -7362,6 +7362,7 @@ ul.mc_parent_list ul.mc_child_list:hover .pricing_btn{
   top: 60px;
   width: 280px;
   z-index: 9;
+
 }
 .dashboard_sidebar:before{
   background-color: rgb(255, 255, 255);

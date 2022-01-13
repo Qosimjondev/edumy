@@ -15,7 +15,7 @@ use yii\helpers\Url;
             </div>
             <div class="dashbord_nav_list">
                 <ul>
-                    <li class="active"><a href="#"><span class="flaticon-puzzle-1"></span> Dashboard</a></li>
+                    <li class="active"><a href="<?= Url::to(['site/index'])?>"><span class="flaticon-puzzle-1"></span> Dashboard</a></li>
                     <li><a href="#"><span class="flaticon-online-learning"></span> My Courses</a></li>
                     <li><a href="#"><span class="flaticon-shopping-bag-1"></span> Order</a></li>
                     <li><a href="#"><span class="flaticon-speech-bubble"></span> Messages</a></li>
@@ -25,7 +25,7 @@ use yii\helpers\Url;
                 </ul>
                 <h4>Account</h4>
                 <ul>
-                    <li><a href="#"><span class="flaticon-settings"></span> Settings</a></li>
+                    <li><a href="<?= Url::to(['user/info'])?>"><span class="flaticon-settings"></span> Settings</a></li>
                     <li><a href="#"><span class="flaticon-logout"></span> Logout</a></li>
                 </ul>
             </div>
