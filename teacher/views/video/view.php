@@ -11,6 +11,7 @@ $this->params['breadcrumbs'][] = ['label' => 'Videos', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
+<div class="col-lg-12">
 <div class="video-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
@@ -40,5 +41,5 @@ $this->params['breadcrumbs'][] = $this->title;
             'created_by',
         ],
     ]) ?>
-
+</div>
 </div>

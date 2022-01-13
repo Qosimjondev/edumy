@@ -7359,6 +7359,7 @@ ul.mc_parent_list ul.mc_child_list:hover .pricing_btn{
   margin-top: 60px;
   left: 0;
   position: absolute;
+  max-width: 250px;
   top: 60px;
   width: 280px;
   z-index: 9;
