@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\Video */
 
-$this->title = $model->id;
+$this->title = $model->course_title;
 $this->params['breadcrumbs'][] = ['label' => 'Videos', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
@@ -34,8 +34,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'video_title',
             'video_description:ntext',
             'video_url:url',
-            'status',
             'course_title',
+            'status',
             'created_at',
             'updated_at',
             'created_by',

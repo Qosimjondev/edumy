@@ -5,6 +5,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 
+/** $model common\models\Video */
 ?>
 <div class="col-lg-12">
     <div class="dashboard_navigationbar dn db-1199">
@@ -50,14 +51,14 @@ use yii\helpers\Url;
                             <div class="row">
                                 <div class="col-xl-6">
                                     <div class="my_profile_setting_input form-group">
-                                        <?= $form->field($video,'video_title')->textInput(['class'=>'form-control','placeholder'=>'video title...'])?>
+                                        <?= $form->field($model,'video_title')->textInput(['class'=>'form-control','placeholder'=>'video title...'])?>
 <!--                                        <label for="formGroupExampleInput1">Video title</label>-->
 <!--                                        <input type="text" class="form-control" id="formGroupExampleInput1" placeholder="UX/UI">-->
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="my_profile_setting_input form-group">
-                                        <?= $form->field($video,'video_url')->textInput(['class'=>'form-control','placeholder'=>'https://www.youtube.com/watch....'])?>
+                                        <?= $form->field($model,'video_url')->textInput(['class'=>'form-control','placeholder'=>'https://www.youtube.com/watch....'])?>
 <!--                                        <label for="formGroupExampleInput3">Video URl</label>-->
 <!--                                        <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="https://www.example.com/watch">-->
                                     </div>
@@ -68,9 +69,8 @@ use yii\helpers\Url;
                     <div class="row my_setting_content_details">
                         <div class="col-xl-6">
                             <div class="my_profile_select_box form-group">
-                                <?= $form->field($video,'status')->dropDownList([
-                                        Video::UN_PUBLISHED =>'UN_PUBLISHED',
-                                        Video::PUBLISHED => 'PUBLISHED'
+                                <?= $form->field($model,'status')->dropDownList([
+                                        $model->getStatusLabels()
                                 ],
                                 ['class'=>'selectpicker'])?>
 <!--                                <label for="exampleFormControlInput5">Category</label><br>-->
@@ -82,7 +82,7 @@ use yii\helpers\Url;
                         </div>
                         <div class="col-xl-6">
                             <div class="my_profile_setting_input form-group">
-                                <?= $form->field($video,'course_title')->textInput(['class'=>'form-control','placeholder'=>'course title'])?>
+                                <?= $form->field($model,'course_title')->textInput(['class'=>'form-control','placeholder'=>'course title'])?>
 <!--                                <label for="formGroupExampleInput3">Course title</label>-->
 <!--                                <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="course title">-->
                             </div>
@@ -90,7 +90,7 @@ use yii\helpers\Url;
                         <div class="col-lg-12">
                             <div class="my_resume_textarea">
                                 <div class="form-group">
-                                    <?= $form->field($video,'video_description')->textarea(['rows'=>7,'placeholder'=>'Video Description...'])?>
+                                    <?= $form->field($model,'video_description')->textarea(['rows'=>7,'placeholder'=>'Video Description...'])?>
 <!--                                    <label for="exampleFormControlTextarea1">Video description</label>-->
 <!--                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="7"></textarea>-->
                                 </div>

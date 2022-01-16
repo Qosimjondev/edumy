@@ -5,9 +5,7 @@ use yii\helpers\Url;
 ?>
 <header class="header-nav menu_style_home_one dashbord_pages navbar-scrolltofixed stricky main-menu">
     <div class="container-fluid">
-        <!-- Ace Responsive Menu -->
         <nav>
-            <!-- Menu Toggle btn-->
             <div class="menu-toggle">
                 <img class="nav_logo_img img-fluid" src=<?= '/teacher/web/images/header-logo.png'?> alt="header-logo.png">
                 <button type="button" id="menu-btn">
@@ -21,39 +19,22 @@ use yii\helpers\Url;
                 <img class="logo2 img-fluid" src=<?= '/teacher/web/images/header-logo.png'?> alt="header-logo.png">
                 <span>edumy</span>
             </a>
-            <!-- Responsive Menu Structure-->
-            <!--Note: declare the Menu style in the data-menu-style="horizontal" (options: horizontal, vertical, accordion) -->
+
             <ul id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">
                 <li>
                     <a href="#"><span class="title">Home</span></a>
                 </li>
+
+                <?php if(\Yii::$app->user->isGuest){?>
+                    <li>
+                        <a href="<?= Url::to(['site/login'])?>"><span class="flaticon-user"></span> Kirish</a>
+                    </li>
+                <?php
+                }else{?>
                 <li>
-                    <a href="#"><span class="flaticon-user"></span> Kirish</a>
-                    <!-- Level Two-->
-<!--                    <ul>-->
-<!--                        <li>-->
-<!--                            <a href="#">Courses List</a>-->
-                    <!--                  <ul> -->
-<!--                                <li><a href="page-course-v1.html">Courses v1</a></li>-->
-<!--                                <li><a href="page-course-v2.html">Courses v2</a></li>-->
-<!--                                <li><a href="page-course-v3.html">Courses v3</a></li>-->
-<!--                            </ul>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <a href="#">Courses Single</a>-->
-<!--                            <ul>-->
-<!--                                <li><a href="page-course-single-v1.html">Single V1</a></li>-->
-<!--                                <li><a href="page-course-single-v2.html">Single V2</a></li>-->
-<!--                                <li><a href="page-course-single-v3.html">Single V3</a></li>-->
-<!--                            </ul>-->
-<!--                        </li>-->
-<!--                        <li><a href="page-instructors.html">Instructors</a></li>-->
-<!--                        <li><a href="page-instructors-single.html">Instructor Single</a></li>-->
-<!--                    </ul>-->
+                    <a href="<?= Url::to(['site/logout'])?>"><span class="flaticon-user"></span> logout</a>
                 </li>
-                <li>
-                    <a href="#"><span class="flaticon-edit"></span> Ro'yxatdan o'tish</a>
-                </li>
+                <?php }?>
             </ul>
             <ul class="header_user_notif pull-right dn-smd">
                 <li class="user_notif">

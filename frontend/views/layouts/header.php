@@ -124,7 +124,7 @@ use yii\helpers\Url;
                         <div class="ht_search_widget">
                             <div class="header_search_widget">
                                 <form class="form-inline mailchimp_form">
-                                    <input type="email" class="form-control mb-2 mr-sm-2" id="inlineFormInputMail2" placeholder="Search for the software or skills you want to learn">
+                                    <input type="text" class="form-control mb-1 mr-sm-1" id="inlineFormInputMail2" placeholder="Kurslarni qidirish...">
                                     <button type="submit" class="btn btn-primary mb-2"><span class="flaticon-magnifying-glass"></span></button>
                                 </form>
                             </div>
@@ -142,7 +142,7 @@ use yii\helpers\Url;
 
             <ul id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">
                 <li class="last">
-                    <a href="page-contact.html"><i class="flaticon-edit"></i> Ro'yxatdan O'tish</a>
+                <a href="<?=Url::to(['site/signup'])?>"><i class="flaticon-edit"></i> Ro'yxatdan O'tish</a>
                 </li>
                 <li class="list_five">
                     <a href="<?=Url::to(['site/login'])?>"><i class="flaticon-user"></i> Kirish</a>
@@ -151,10 +151,10 @@ use yii\helpers\Url;
                     <a href="#"><span class="title">Yordam</span></a>
                 </li>
                 <li class="list_two">
-                    <a href="<?=Url::to(['site/contact'])?>"><span class="title">Bog'lanish</span></a>
+                    <a href="<?=Url::to(['site/logout'])?>" data-method="post"><span class="title">Bog'lanish</span></a>
                 </li>
                 <li class="list_one">
-                    <a href="#"><span class="title">Kirish</span></a>
+                    <a href="#"><span class="title">Kurslar</span></a>
                 </li>
             </ul>
         </nav>

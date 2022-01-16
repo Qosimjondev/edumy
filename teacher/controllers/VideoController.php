@@ -1,53 +1,159 @@
 <?php
 
 namespace teacher\controllers;
+
 use common\models\Video;
+use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+use yii\filters\VerbFilter;
 
-class VideoController extends Controller{
+/**
+ * VideoController implements the CRUD actions for Video model.
+ */
+class VideoController extends Controller
+{
 
-
-    public function actionCreate()
+    /**
+     * @inheritDoc
+     */
+    public function behaviors()
     {
-        $model =new Video();
-        if($this->request->isPost){
-            if($model->load(\Yii::$app->request->post()) & $model->save()){
-                return $this->redirect(['view','id'=>$model->id]);
-            }
-            $model->getErrors();
-        }
-        return $this->render(
-            'create',
-            ['video' =>$model]
+        return array_merge(
+            parent::behaviors(),
+            [
+                'verbs' => [
+                    'class' => VerbFilter::className(),
+                    'actions' => [
+                        'delete' => ['POST'],
+                    ],
+                ],
+            ]
         );
     }
+
+    /**
+     * Lists all Video models.
+     *
+     * @return string
+     */
+    public function actionIndex()
+    {
+        $dataProvider = new ActiveDataProvider([
+            'query' => Video::find(),
+            /*
+            'pagination' => [
+                'pageSize' => 50
+            ],
+            'sort' => [
+                'defaultOrder' => [
+                    'id' => SORT_DESC,
+                ]
+            ],
+            */
+        ]);
+
+        return $this->render('index', [
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    /**
+     * Displays a single Video model.
+     * @param int $id ID
+     * @return string
+     * @throws NotFoundHttpException if the model cannot be found
+     */
     public function actionView($id)
     {
-        return  $this->render(
-            'view',
-            ['model'=>$this->findModel($id)]
-        );
+        return $this->render('view', [
+            'model' => $this->findModel($id),
+        ]);
     }
-    public function actionPlaylist()
+
+    /**
+     * Creates a new Video model.
+     * If creation is successful, the browser will be redirected to the 'view' page.
+     * @return string|\yii\web\Response
+     */
+    public function actionCreate()
     {
-        return $this->render('playlist');
+        $model = new Video();
+        $userId=\Yii::$app->user->id;
+        if ($model->load(\Yii::$app->request->post())) {
+            var_dump($userId);
+            die();
+            $model->created_by=$userId;
+              if($model->save())
+              {
+                  return $this->redirect(['view','id'=>$model->id]);
+              }
+              else
+              {
+                  $model->getErrors();
+              }
+        }
+        return $this->render('create', [
+            'model' => $model,
+        ]);
     }
-    public function actionUpdate($id){
 
-        $model=$this->findModel($id);
+    /**
+     * Updates an existing Video model.
+     * If update is successful, the browser will be redirected to the 'view' page.
+     * @param int $id ID
+     * @return string|\yii\web\Response
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionUpdate($id)
+    {
+        $model = $this->findModel($id);
 
-        return $this->render(
-            'update',
-            ['model'=>$model]);
+        $userId=\Yii::$app->user->id;
+        if ($model->load($this->request->post())) {
+
+            if($model->save())
+            {
+                return $this->redirect(['view','id'=>$model->id]);
+            }
+            else
+            {
+                $model->getErrors();
+            }
+        }
+
+        return $this->render('update', [
+            'model' => $model,
+        ]);
     }
 
+    /**
+     * Deletes an existing Video model.
+     * If deletion is successful, the browser will be redirected to the 'index' page.
+     * @param int $id ID
+     * @return \yii\web\Response
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionDelete($id)
+    {
+        $this->findModel($id)->delete();
+
+        return $this->redirect(['index']);
+    }
+
+    /**
+     * Finds the Video model based on its primary key value.
+     * If the model is not found, a 404 HTTP exception will be thrown.
+     * @param int $id ID
+     * @return Video the loaded model
+     * @throws NotFoundHttpException if the model cannot be found
+     */
     protected function findModel($id)
     {
-        if(($model=Video::findOne($id)) !== null){
+        if (($model = Video::findOne(['id' => $id])) !== null) {
             return $model;
         }
-        throw new NotFoundHttpException('Video does not exsisit');
+
+        throw new NotFoundHttpException('The requested page does not exist.');
     }
 }
-?>

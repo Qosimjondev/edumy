@@ -1,7 +1,7 @@
-RewriteEngine On
-RewriteBase /admin
+RewriteEngine on
 
+# Если запрашиваемая в URL директория или файл существуют обращаемся к ним напрямую
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-
-RewriteRule . index.php/$1
+# Если нет - перенаправляем запрос на index.php
+RewriteRule . index.php

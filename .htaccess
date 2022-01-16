@@ -23,5 +23,7 @@ RewriteRule ^teacher/(.+)?$ teacher/web/$1 [L,PT]
 RewriteRule ^student(/.+)?$ student/web/$1 [L,PT]
 RewriteRule ^student/(.+)?$ student/web/$1 [L,PT]
 
+
+
 # handle the case of frontend
 RewriteRule ^(.+)?$ frontend/web/$1

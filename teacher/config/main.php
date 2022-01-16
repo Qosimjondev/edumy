@@ -20,14 +20,23 @@ return [
             'baseUrl'=>'/teacher',
         ],
         'user' => [
+            'class'=>'yii\web\User',
             'identityClass' => 'common\models\User',
+            'loginUrl' => 'site/login',
             'enableAutoLogin' => true,
-            'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
+            'identityCookie' => ['name' => '_identity_teacher', 'httpOnly' => true],
         ],
         'session' => [
-            // this is the name of the session cookie used for login on the backend
-            'name' => 'advanced-teacher',
+            'name' => 'teacher_session',
+            'cookieParams' => [
+                'httpOnly' => true,
+                'path' => '/teacher',
+            ],
         ],
+//        'session' => [
+//            // this is the name of the session cookie used for login on the backend
+//            'name' => 'advanced-teacher',
+//        ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [

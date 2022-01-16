@@ -3,7 +3,7 @@
 use yii\helpers\Url;
 
 ?>
-<section class="dashboard_sidebar dn-1199">
+<section class="dashboard_sidebar dn-1199" style="height: 100vh;">
     <div class="dashboard_sidebars">
         <div class="user_board">
             <div class="user_profile">
@@ -17,7 +17,7 @@ use yii\helpers\Url;
                 <ul>
                     <li class="active"><a href="<?= Url::to(['site/index'])?>"><span class="flaticon-puzzle-1"></span> Dashboard</a></li>
                     <li><a href="#"><span class="flaticon-online-learning"></span> My Courses</a></li>
-                    <li><a href="#"><span class="flaticon-shopping-bag-1"></span> Order</a></li>
+                    <li><a href="<?= Url::to(['video/index'])?>"><span class="flaticon-elearning-1"></span> Video List</a></li>
                     <li><a href="#"><span class="flaticon-speech-bubble"></span> Messages</a></li>
                     <li><a href="#"><span class="flaticon-rating"></span> Reviews</a></li>
                     <li><a href="#"><span class="flaticon-like"></span> Bookmarks</a></li>

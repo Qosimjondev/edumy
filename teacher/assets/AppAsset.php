@@ -5,7 +5,7 @@ namespace teacher\assets;
 use yii\web\AssetBundle;
 
 /**
- * Main backend application asset bundle.
+ * Main teacher application asset bundle.
  */
 class AppAsset extends AssetBundle
 {

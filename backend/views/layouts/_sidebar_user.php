@@ -25,7 +25,7 @@ $this->title='Education';
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="<?= Url::to(['site/my-sertificate'])?>">
+                <a class="sidebar-link" href="<?= Url::to(['site/logout'])?>" data-method="post">
                     <i class="align-middle" data-feather="file"></i> <span class="align-middle">Sertifikatlar</span>
                 </a>
             </li>
