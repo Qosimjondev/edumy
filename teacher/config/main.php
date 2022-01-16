@@ -24,19 +24,19 @@ return [
             'identityClass' => 'common\models\User',
             'loginUrl' => 'site/login',
             'enableAutoLogin' => true,
-            'identityCookie' => ['name' => '_identity_teacher', 'httpOnly' => true],
-        ],
-        'session' => [
-            'name' => 'teacher_session',
-            'cookieParams' => [
-                'httpOnly' => true,
-                'path' => '/teacher',
-            ],
+            'identityCookie' => ['name' => '_identity', 'httpOnly' => true],
         ],
 //        'session' => [
-//            // this is the name of the session cookie used for login on the backend
-//            'name' => 'advanced-teacher',
+//            'name' => '_session',
+//            'cookieParams' => [
+//                'httpOnly' => true,
+//                'path' => '/teacher',
+//            ],
 //        ],
+        'session' => [
+            // this is the name of the session cookie used for login on the backend
+            'name' => '_session',
+        ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [

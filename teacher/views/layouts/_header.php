@@ -22,7 +22,7 @@ use yii\helpers\Url;
 
             <ul id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">
                 <li>
-                    <a href="#"><span class="title">Home</span></a>
+                    <a href="<?=Url::to(['/'])?>"><span class="title">Home</span></a>
                 </li>
 
                 <?php if(\Yii::$app->user->isGuest){?>
@@ -32,7 +32,7 @@ use yii\helpers\Url;
                 <?php
                 }else{?>
                 <li>
-                    <a href="<?= Url::to(['site/logout'])?>"><span class="flaticon-user"></span> logout</a>
+                    <a href="<?= Url::to(['site/logout'])?>" data-method="post"><span class="flaticon-user"></span> logout</a>
                 </li>
                 <?php }?>
             </ul>

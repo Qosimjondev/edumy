@@ -141,17 +141,20 @@ use yii\helpers\Url;
             </div>
 
             <ul id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">
+                <?php if(Yii::$app->user->isGuest): ?>
                 <li class="last">
                 <a href="<?=Url::to(['site/signup'])?>"><i class="flaticon-edit"></i> Ro'yxatdan O'tish</a>
                 </li>
                 <li class="list_five">
                     <a href="<?=Url::to(['site/login'])?>"><i class="flaticon-user"></i> Kirish</a>
                 </li>
+                <?php else: ?>
+                <li class="list_two">
+                    <a href="<?=Url::to(['site/logout'])?>" data-method="post"><span class="title">Chiqish</span></a>
+                </li>
+                <?php endif; ?>
                 <li class="list_three">
                     <a href="#"><span class="title">Yordam</span></a>
-                </li>
-                <li class="list_two">
-                    <a href="<?=Url::to(['site/logout'])?>" data-method="post"><span class="title">Bog'lanish</span></a>
                 </li>
                 <li class="list_one">
                     <a href="#"><span class="title">Kurslar</span></a>
