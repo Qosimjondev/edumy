@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5205b2d50e809f6ba28c9b2da07ade1",
+    "content-hash": "1ce494ac9d471b1c6b12b05c86d44376",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -358,6 +358,51 @@
                 "source": "https://github.com/ezyang/htmlpurifier/tree/v4.14.0"
             },
             "time": "2021-12-25T01:21:49+00:00"
+        },
+        {
+            "name": "lesha724/yii2-youtube-widget",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lesha724/yii2-youtube-widget.git",
+                "reference": "a731e80deab7eb8f1ffa06e3f134153f1b7d0144"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lesha724/yii2-youtube-widget/zipball/a731e80deab7eb8f1ffa06e3f134153f1b7d0144",
+                "reference": "a731e80deab7eb8f1ffa06e3f134153f1b7d0144",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "lesha724\\youtubewidget\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "lesha724",
+                    "email": "neff.alexey@gmail.com"
+                }
+            ],
+            "description": "yii2-youtube-widget",
+            "keywords": [
+                "extension",
+                "yii2",
+                "youtube"
+            ],
+            "support": {
+                "issues": "https://github.com/lesha724/yii2-youtube-widget/issues",
+                "source": "https://github.com/lesha724/yii2-youtube-widget/tree/master"
+            },
+            "time": "2017-03-03T13:18:40+00:00"
         },
         {
             "name": "npm-asset/bootstrap",
@@ -5576,5 +5621,5 @@
         "php": ">=5.6.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.2.0"
 }
