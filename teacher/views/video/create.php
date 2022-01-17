@@ -5,7 +5,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 
-/** $model common\models\Video */
+/** @var $model common\models\Video */
 ?>
 <div class="col-lg-12">
     <div class="dashboard_navigationbar dn db-1199">
@@ -44,7 +44,7 @@ use yii\helpers\Url;
                         </div>
                     </div>
                     <?php $form=ActiveForm::begin([
-                            'options'=>['enctype/multipart/form-data']
+                            'options'=>['enctype' => 'multipart/form-data']
                     ])?>
                     <div class="row my_setting_content_details pb0">
                         <div class="col-xl-12">

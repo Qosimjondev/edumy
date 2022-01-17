@@ -29,9 +29,11 @@ class Video extends \yii\db\ActiveRecord
             [
                 'class'=>BlameableBehavior::class,
                 'updatedByAttribute' => false,
+                'createdByAttribute' => 'created_by'
             ],
             [
                 'class'=>TimestampBehavior::class,
+                'createdAtAttribute' => 'created_at'
             ]
         ];
     }
@@ -51,7 +53,7 @@ class Video extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['video_title', 'video_url', 'course_title', 'created_by'], 'required'],
+            [['video_title', 'video_url', 'course_title'], 'required'],
             [['video_description'], 'string'],
             [['status', 'created_at', 'updated_at', 'created_by'], 'integer'],
             [['video_title', 'course_title'], 'string', 'max' => 255],

@@ -24,7 +24,7 @@ class m220113_192033_create_video_table extends Migration
             'status' => $this->integer(1)->defaultValue(0),
             'created_at' => $this->integer(11),
             'updated_at' => $this->integer(11),
-            'created_by' => $this->integer(11),
+            'created_by' => $this->integer(11)->notNull(),
         ]);
 
         // creates index for column `created_by`

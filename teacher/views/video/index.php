@@ -11,6 +11,7 @@ use yii\grid\GridView;
 $this->title = 'Videos';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<div class="col-lg-12">
 <div class="video-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
@@ -35,13 +36,21 @@ $this->params['breadcrumbs'][] = $this->title;
             //'updated_at',
             //'created_by',
             [
-                'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, Video $model, $key, $index, $column) {
-                    return Url::toRoute([$action, 'id' => $model->id]);
-                 }
+                'class' => 'yii\grid\ActionColumn',
+                'buttons'=>[
+                    'update'=>function($url)
+                    {
+                        return \yii\bootstrap4\Html::a('Update',$url,['class'=>'btn btn-primary ',]);
+                    },
+                    'delete'=>function($url)
+                    {
+                        return Html::a('Delete',$url,['class'=>'btn btn-danger ml-2','data-method'=>'post','data-confirm'=>'Seryoz ?']);
+                    },
+                ],
+                'template'=>'{update}{delete}',
+
             ],
         ],
     ]); ?>
-
-
+</div>
 </div>

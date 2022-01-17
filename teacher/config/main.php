@@ -26,16 +26,9 @@ return [
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity', 'httpOnly' => true],
         ],
-//        'session' => [
-//            'name' => '_session',
-//            'cookieParams' => [
-//                'httpOnly' => true,
-//                'path' => '/teacher',
-//            ],
-//        ],
         'session' => [
             // this is the name of the session cookie used for login on the backend
-            'name' => '_session',
+            'name' => 'advanced',
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,

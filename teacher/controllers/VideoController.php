@@ -39,8 +39,10 @@ class VideoController extends Controller
      */
     public function actionIndex()
     {
+        $userId=\Yii::$app->user->id;
         $dataProvider = new ActiveDataProvider([
-            'query' => Video::find(),
+            'query' => Video::find()
+                ->where(['id'=>$userId]),
             /*
             'pagination' => [
                 'pageSize' => 50
@@ -79,18 +81,14 @@ class VideoController extends Controller
     public function actionCreate()
     {
         $model = new Video();
-        $userId=\Yii::$app->user->id;
         if ($model->load(\Yii::$app->request->post())) {
-            var_dump($userId);
-            die();
-            $model->created_by=$userId;
               if($model->save())
               {
                   return $this->redirect(['view','id'=>$model->id]);
               }
               else
               {
-                  $model->getErrors();
+                  $model->loadDefaultValues();
               }
         }
         return $this->render('create', [
