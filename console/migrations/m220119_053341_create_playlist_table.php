@@ -19,6 +19,7 @@ class m220119_053341_create_playlist_table extends Migration
             'id' => $this->primaryKey(),
             'course_title' => $this->string(255)->notNull(),
             'course_price' => $this->integer(100)->defaultValue(0),
+            'course_description'=>$this->text(),
             'course_poster' => $this->string(255)->notNull(),
             'course_categ' => $this->string(255)->notNull(),
             'created_by' => $this->integer(11),

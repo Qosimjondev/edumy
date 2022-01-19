@@ -57,6 +57,7 @@ class AppAsset extends AssetBundle
         'js/dashboard-script.js',
 
         'js/script.js',
+        'js/style.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

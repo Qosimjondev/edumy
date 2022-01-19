@@ -3,10 +3,12 @@
 namespace teacher\controllers;
 
 use common\models\Playlist;
+use yii\base\Security;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * PlaylistController implements the CRUD actions for Playlist model.
@@ -70,7 +72,7 @@ class PlaylistController extends Controller
         ]);
     }
 
-    /**
+        /**
      * Creates a new Playlist model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return string|\yii\web\Response
@@ -80,8 +82,15 @@ class PlaylistController extends Controller
         $model = new Playlist();
 
         if ($this->request->isPost) {
-            if ($model->load($this->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->id]);
+            if ($model->load($this->request->post())) {
+                $model->imageFile=UploadedFile::getInstance($model,'imageFile');
+                $name=$this->getSecurity(8);
+                $extension=$model->imageFile->extension;
+                $model->imageFile->saveAs(\Yii::getAlias('@frontend').'/web/uploads/poster/'.$name.'.'.$extension);
+                $model->course_poster=$name.'.'.$extension;
+                if($model->save(false)) {
+                    return $this->redirect(['view', 'id' => $model->id]);
+                }
             }
         } else {
             $model->loadDefaultValues();
@@ -140,5 +149,11 @@ class PlaylistController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+    protected function getSecurity($length)
+    {
+        $sec=new Security();
+        $name=$sec->generateRandomString($length);
+        return $name;
     }
 }

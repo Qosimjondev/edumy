@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\Playlist */
 
-$this->title = $model->id;
+$this->title = $model->course_title;
 $this->params['breadcrumbs'][] = ['label' => 'Playlists', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);

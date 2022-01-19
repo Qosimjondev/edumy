@@ -3,6 +3,8 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\BlameableBehavior;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "playlist".
@@ -26,15 +28,30 @@ class Playlist extends \yii\db\ActiveRecord
     {
         return 'playlist';
     }
-
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => BlameableBehavior::class,
+                'updatedByAttribute' => false
+            ],
+            [
+                'class'=>TimestampBehavior::class,
+                'updatedAtAttribute' => false
+            ]
+        ];
+    }
+    public $imageFile;
     /**
      * {@inheritdoc}
      */
     public function rules()
     {
         return [
-            [['course_title', 'course_poster', 'course_categ'], 'required'],
+            [['course_title', 'course_poster', 'course_categ','course_description'], 'required'],
             [['course_price', 'created_by', 'created_at'], 'integer'],
+            [['course_description'],'string'],
+            [['imageFile'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg'],
             [['course_title', 'course_poster', 'course_categ'], 'string', 'max' => 255],
             [['created_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['created_by' => 'id']],
         ];
@@ -49,6 +66,7 @@ class Playlist extends \yii\db\ActiveRecord
             'id' => 'ID',
             'course_title' => 'Course Title',
             'course_price' => 'Course Price',
+            'course_description'=>'Description',
             'course_poster' => 'Course Poster',
             'course_categ' => 'Course Categ',
             'created_by' => 'Created By',
@@ -65,7 +83,10 @@ class Playlist extends \yii\db\ActiveRecord
     {
         return $this->hasOne(User::className(), ['id' => 'created_by']);
     }
-
+    public function getCourseTitle()
+    {
+        return $this->hasMany(Video::className(),['course_title'=>'id']);
+    }
     /**
      * {@inheritdoc}
      * @return \common\models\query\PlaylistQuery the active query used by this AR class.
