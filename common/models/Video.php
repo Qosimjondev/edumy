@@ -105,4 +105,5 @@ class Video extends \yii\db\ActiveRecord
             self::PUBLISHED,
         ];
     }
+
 }

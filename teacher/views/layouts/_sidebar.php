@@ -22,7 +22,7 @@ use yii\helpers\Url;
                     <li><a href="#"><span class="flaticon-rating"></span> Reviews</a></li>
                     <li><a href="#"><span class="flaticon-like"></span> Bookmarks</a></li>
                     <li><a href="<?= Url::to(['video/create'])?>"><span class="flaticon-pencil"></span> Add Video</a></li>
-                    <li><a href="<?= Url::to(['video/playlist'])?>"><span class="flaticon-add-contact"></span> Add listing</a></li>
+                    <li><a href="<?= Url::to(['playlist/create'])?>"><span class="flaticon-add-contact"></span> Add listing</a></li>
                 </ul>
                 <h4>Account</h4>
                 <ul>

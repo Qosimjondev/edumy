@@ -167,7 +167,7 @@ iframe {
   width: 100%; }
 
 a {
-  color: #555555;
+  color: blue;
   text-decoration: none;
   -webkit-font-smoothing: antialiased; }
   a:hover, a:focus {

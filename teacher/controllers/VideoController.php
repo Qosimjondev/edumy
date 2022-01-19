@@ -2,6 +2,7 @@
 
 namespace teacher\controllers;
 
+use common\models\Playlist;
 use common\models\Video;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
@@ -41,8 +42,7 @@ class VideoController extends Controller
     {
         $userId=\Yii::$app->user->id;
         $dataProvider = new ActiveDataProvider([
-            'query' => Video::find()
-                ->where(['id'=>$userId]),
+            'query' => Video::find(),
             /*
             'pagination' => [
                 'pageSize' => 50
@@ -84,7 +84,7 @@ class VideoController extends Controller
         if ($model->load(\Yii::$app->request->post())) {
               if($model->save())
               {
-                  return $this->redirect(['view','id'=>$model->id]);
+                  return $this->redirect(['index']);
               }
               else
               {
@@ -142,7 +142,11 @@ class VideoController extends Controller
 
         return $this->redirect(['index']);
     }
-
+    public function actionOpen($id)
+    {
+        $model=Video::findOne($id);
+        return $this->render('open',['model'=>$model]);
+    }
     /**
      * Finds the Video model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.

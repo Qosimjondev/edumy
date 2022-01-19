@@ -8,14 +8,14 @@ use Yii;
  * This is the model class for table "playlist".
  *
  * @property int $id
- * @property int|null $course_id
- * @property int|null $couse_price
- * @property int|null $course_author
- * @property string|null $course_poster
+ * @property string $course_title
+ * @property int|null $course_price
+ * @property string $course_poster
  * @property string $course_categ
+ * @property int|null $created_by
+ * @property int|null $created_at
  *
- * @property Video $course
- * @property User $courseAuthor
+ * @property User $createdBy
  */
 class Playlist extends \yii\db\ActiveRecord
 {
@@ -33,11 +33,10 @@ class Playlist extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['course_id', 'couse_price', 'course_author'], 'integer'],
-            [['course_categ'], 'required'],
-            [['course_poster', 'course_categ'], 'string', 'max' => 255],
-            [['course_author'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['course_author' => 'id']],
-            [['course_id'], 'exist', 'skipOnError' => true, 'targetClass' => Video::className(), 'targetAttribute' => ['course_id' => 'id']],
+            [['course_title', 'course_poster', 'course_categ'], 'required'],
+            [['course_price', 'created_by', 'created_at'], 'integer'],
+            [['course_title', 'course_poster', 'course_categ'], 'string', 'max' => 255],
+            [['created_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['created_by' => 'id']],
         ];
     }
 
@@ -48,32 +47,23 @@ class Playlist extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'course_id' => 'Course ID',
-            'couse_price' => 'Couse Price',
-            'course_author' => 'Course Author',
+            'course_title' => 'Course Title',
+            'course_price' => 'Course Price',
             'course_poster' => 'Course Poster',
             'course_categ' => 'Course Categ',
+            'created_by' => 'Created By',
+            'created_at' => 'Created At',
         ];
     }
 
     /**
-     * Gets query for [[Course]].
-     *
-     * @return \yii\db\ActiveQuery|\common\models\query\VideoQuery
-     */
-    public function getCourse()
-    {
-        return $this->hasOne(Video::className(), ['id' => 'course_id']);
-    }
-
-    /**
-     * Gets query for [[CourseAuthor]].
+     * Gets query for [[CreatedBy]].
      *
      * @return \yii\db\ActiveQuery|\common\models\query\UserQuery
      */
-    public function getCourseAuthor()
+    public function getCreatedBy()
     {
-        return $this->hasOne(User::className(), ['id' => 'course_author']);
+        return $this->hasOne(User::className(), ['id' => 'created_by']);
     }
 
     /**

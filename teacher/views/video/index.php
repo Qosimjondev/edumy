@@ -34,37 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'attribute' => 'Video_Url',
                     'format' => 'raw',
                     'content' => function ($data){
-                        return Youtube::widget([
-                            'video'=>$data->video_url,
-                            'iframeOptions'=>[
-                                'class'=>'youtube-video'
-                            ],
-                            'divOptions'=>[
-                                'class'=>'youtube-video-div'
-                            ],
-                            'height'=>250,
-                            'width'=>500,
-                            'playerVars'=>[
-                                'controls' => 1,
-                                'autoplay' => 0,
-                                'showinfo' => 0,
-                                'start'   => 0,
-                                'end' => 0,
-                                'loop ' => 0,
-                                'modestbranding'=>  1,
-                                'fs'=>0,
-                                'rel'=>1,
-                                'disablekb'=>0
-                            ],
-                            'events'=>[
-                                /*https://developers.google.com/youtube/iframe_api_reference?hl=ru*/
-                                'onReady'=> 'function (event){
-                        /*The API will call this function when the video player is ready*/
-                        event.target.playVideo();
-            }',
-                            ]
-                        ]);;
-
+                        return $data->video_url.'<br>'.Html::a('Open',['open','id'=>$data->id]);
                     }
             ],
             'course_title',

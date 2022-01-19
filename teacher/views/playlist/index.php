@@ -11,6 +11,7 @@ use yii\grid\GridView;
 $this->title = 'Playlists';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<div class="col-lg-12">
 <div class="playlist-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
@@ -26,11 +27,12 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'course_id',
-            'couse_price',
-            'course_author',
+            'course_title',
+            'course_price',
             'course_poster',
-            //'course_categ',
+            'course_categ',
+            //'created_by',
+            //'created_at',
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, Playlist $model, $key, $index, $column) {
@@ -40,5 +42,5 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]); ?>
 
-
+</div>
 </div>

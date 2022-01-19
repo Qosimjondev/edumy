@@ -11,6 +11,7 @@ $this->params['breadcrumbs'][] = ['label' => 'Playlists', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
+<div class="col-lg-12">
 <div class="playlist-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
@@ -30,12 +31,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'course_id',
-            'couse_price',
-            'course_author',
+            'course_title',
+            'course_price',
             'course_poster',
             'course_categ',
+            'created_by',
+            'created_at',
         ],
     ]) ?>
-
+</div>
 </div>

@@ -10,6 +10,7 @@ $this->params['breadcrumbs'][] = ['label' => 'Playlists', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
+<div class="col-lg-12">
 <div class="playlist-update">
 
     <h1><?= Html::encode($this->title) ?></h1>
@@ -17,5 +18,5 @@ $this->params['breadcrumbs'][] = 'Update';
     <?= $this->render('_form', [
         'model' => $model,
     ]) ?>
-
+</div>
 </div>
