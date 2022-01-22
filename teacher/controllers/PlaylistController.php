@@ -42,16 +42,6 @@ class PlaylistController extends Controller
     {
         $dataProvider = new ActiveDataProvider([
             'query' => Playlist::find(),
-            /*
-            'pagination' => [
-                'pageSize' => 50
-            ],
-            'sort' => [
-                'defaultOrder' => [
-                    'id' => SORT_DESC,
-                ]
-            ],
-            */
         ]);
 
         return $this->render('index', [
@@ -88,6 +78,7 @@ class PlaylistController extends Controller
                 $extension=$model->imageFile->extension;
                 $model->imageFile->saveAs(\Yii::getAlias('@frontend').'/web/uploads/poster/'.$name.'.'.$extension);
                 $model->course_poster=$name.'.'.$extension;
+                $model->course_price=trim($model->course_price);
                 if($model->save(false)) {
                     return $this->redirect(['view', 'id' => $model->id]);
                 }
@@ -111,8 +102,23 @@ class PlaylistController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-
-        if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
+        $oldImg=$model->course_poster;
+        if ( $model->load($this->request->post())) {
+            if($model->course_poster)
+            {
+                $model->imageFile=UploadedFile::getInstance($model,'imageFile');
+                $name=$this->getSecurity(8);
+                $extension=$model->imageFile->extension;
+                $model->imageFile->saveAs(\Yii::getAlias('@frontend').'/web/uploads/poster/'.$name.'.'.$extension);
+                $model->course_poster=$name.'.'.$extension;
+                if(unlink(\Yii::getAlias('@frontend').'/web/uploads/poster/'.$oldImg))
+                {
+                    $model->save(false);
+                }
+            }else
+            {
+               $model->save();
+            }
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -133,6 +139,18 @@ class PlaylistController extends Controller
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
+    }
+    public function actionStart($id)
+    {
+        $model=$this->findModel($id);
+
+        return $this->render('start',[ 'model' => $model]);
+    }
+    public function actionInformation($id)
+    {
+        $model=$this->findModel($id);
+
+        return $this->render('information',[ 'model' =>$model ]);
     }
 
     /**

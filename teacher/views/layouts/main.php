@@ -35,7 +35,7 @@ AppAsset::register($this);
                         <div class="row">
                             <?= $content?>
                         </div>
-                        <?= $this->render('_footer')?>
+
                     </div>
                 </div>
             </div>

@@ -12010,3 +12010,41 @@ textarea.form-control{
 .dashboard_sidebars{
   height: 100vh;
 }
+#poster
+{
+  min-width: 200px;
+}
+
+#w0 .card {
+  cursor: pointer;
+  box-shadow: 0 1rem 2rem hsl(0 0% 0% / 20%);
+  transition: all .5s linear;
+  min-height: 450px;
+}
+#w0 .card:hover {
+  box-shadow: 0 0 25px -5px #090846;
+}
+.card-buttons {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+}
+.card-buttons a {
+  /*margin: 5px 0px 5px 15px;*/
+}
+.card-img{
+  padding-top:20px;
+}
+.card-img img{
+  width: 90%;
+  margin: 0px auto;
+  border-radius:5px;
+  max-height: 160px;
+  display: block;
+}
+.card-body h6 {
+  font-size: 15px;
+}

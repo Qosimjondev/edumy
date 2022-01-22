@@ -2,8 +2,7 @@
 
 use yii\helpers\Html;
 use yii\helpers\Url;
-use yii\grid\ActionColumn;
-use yii\grid\GridView;
+use yii\widgets\ListView;
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -20,27 +19,14 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Create Playlist', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
+    <?=ListView::widget([
+            'dataProvider' => $dataProvider,
+            'itemView' => '_view',
+            'layout' => '<div class="d-flex flex-wrap mt-4 vh-100">{items}</div>{pager}',
+            'itemOptions' => ['tag'=>null]
+    ]);?>
 
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'course_title',
-            'course_price',
-            'course_poster',
-            'course_categ',
-            //'created_by',
-            //'created_at',
-            [
-                'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, Playlist $model, $key, $index, $column) {
-                    return Url::toRoute([$action, 'id' => $model->id]);
-                 }
-            ],
-        ],
-    ]); ?>
 
 </div>
 </div>

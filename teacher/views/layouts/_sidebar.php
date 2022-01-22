@@ -16,7 +16,7 @@ use yii\helpers\Url;
             <div class="dashbord_nav_list">
                 <ul>
                     <li class="active"><a href="<?= Url::to(['site/index'])?>"><span class="flaticon-puzzle-1"></span> Dashboard</a></li>
-                    <li><a href="#"><span class="flaticon-online-learning"></span> My Courses</a></li>
+                    <li><a href="<?= Url::to(['playlist/index'])?>"><span class="flaticon-online-learning"></span> My Courses</a></li>
                     <li><a href="<?= Url::to(['video/index'])?>"><span class="flaticon-elearning-1"></span> Video List</a></li>
                     <li><a href="#"><span class="flaticon-speech-bubble"></span> Messages</a></li>
                     <li><a href="#"><span class="flaticon-rating"></span> Reviews</a></li>
