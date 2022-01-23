@@ -2,6 +2,7 @@
 
 /* @var $model \common\models\Playlist */
 
+use yii\bootstrap4\Modal;
 use yii\helpers\Url;
 
 ?>
@@ -11,7 +12,7 @@ use yii\helpers\Url;
         <img src="<?= '/frontend/web/uploads/poster/'.$model->course_poster ?>" class="card-img-top" alt="card_img">
     </div>
     <div class="card-body" style="text-align: center">
-        <h5 class="card-title" style="font-size: 1.25rem"><?= $model->getCourseName($model->course_title) ?></h5>
+        <h5 class="card-title" style="font-size: 1.25rem"><?= $model->course_title ?></h5>
         <p class="text-muted"><?= $model->course_categ ?></p>
         <h6><span class="flaticon-user"></span> <?= $model->course_author ?></h6>
         <div class="card-buttons">
@@ -21,3 +22,11 @@ use yii\helpers\Url;
     </div>
 </div>
 </div>
+<?php
+    Modal::begin([
+            'title'=>'Information',
+            'id'=>'modal'
+    ])
+?>
+<div id="blok"></div>
+<?php Modal::end() ?>

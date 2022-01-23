@@ -1,6 +1,8 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\Url;
+use yii\grid\ActionColumn;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
@@ -21,29 +23,21 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
-//            ['class' => 'yii\grid\SerialColumn'],
+            ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'title',
-            'video_name',
-            'description:ntext',
-            'poster',
-            'status',
+            'video_title',
+            'video_description:ntext',
+            'video_url:url',
+            'course_id',
             //'created_by',
-            //'user_id',
+            //'created_at',
             [
-                    'attribute'=>'created_at',
-                    'value'=>function($data){
-                        return \Yii::$app->formatter->asDate($data->created_at);
-                    }
+                'class' => ActionColumn::className(),
+                'urlCreator' => function ($action, Video $model, $key, $index, $column) {
+                    return Url::toRoute([$action, 'id' => $model->id]);
+                 }
             ],
-            [
-                    'attribute'=>'updated_at',
-                    'value'=>function($data){
-                        return \Yii::$app->formatter->asDate($data->updated_at);
-                    }
-            ],
-            ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 

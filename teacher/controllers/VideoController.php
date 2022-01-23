@@ -2,7 +2,7 @@
 
 namespace teacher\controllers;
 
-use common\models\Playlist;
+use common\models\Course;
 use common\models\Video;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
@@ -40,7 +40,7 @@ class VideoController extends Controller
      */
     public function actionIndex()
     {
-        $userId=\Yii::$app->user->id;
+
         $dataProvider = new ActiveDataProvider([
             'query' => Video::find(),
             /*
@@ -82,14 +82,14 @@ class VideoController extends Controller
     {
         $model = new Video();
         if ($model->load(\Yii::$app->request->post())) {
-              if($model->save())
-              {
-                  return $this->redirect(['index']);
-              }
-              else
-              {
-                  $model->loadDefaultValues();
-              }
+            if($model->save())
+            {
+                return $this->redirect(['index']);
+            }
+            else
+            {
+                $model->loadDefaultValues();
+            }
         }
         return $this->render('create', [
             'model' => $model,
@@ -111,7 +111,7 @@ class VideoController extends Controller
     {
         $model = $this->findModel($id);
 
-        $userId=\Yii::$app->user->id;
+
         if ($model->load($this->request->post())) {
 
             if($model->save())

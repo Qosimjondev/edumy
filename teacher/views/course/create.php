@@ -1,16 +1,16 @@
-<?php
+    <?php
 
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Playlist */
+/* @var $model common\models\Course */
 
-$this->title = 'Create Playlist';
-$this->params['breadcrumbs'][] = ['label' => 'Playlists', 'url' => ['index']];
+$this->title = 'Create Course';
+$this->params['breadcrumbs'][] = ['label' => 'Courses', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="col-lg-12">
-<div class="playlist-create">
+<div class="course-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

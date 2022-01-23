@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\Video */
 
-$this->title = $model->title;
+$this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Videos', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
@@ -16,7 +16,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Index', ['index'], ['class' => 'btn btn-success']) ?>
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
@@ -31,16 +30,12 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'title',
-            'description:ntext',
-            'poster',
-            [
-                    'label'=>'updated_at',
-                    'value'=>function($data){
-                       return \Yii::$app->formatter->asDate($data->updated_at);
-                    },
-            ],
-            'status'
+            'video_title',
+            'video_description:ntext',
+            'video_url:url',
+            'course_id',
+            'created_by',
+            'created_at',
         ],
     ]) ?>
 

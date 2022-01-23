@@ -2,7 +2,7 @@
 
 namespace teacher\controllers;
 
-use common\models\Playlist;
+use common\models\Course;
 use yii\base\Security;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
@@ -11,9 +11,9 @@ use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
 
 /**
- * PlaylistController implements the CRUD actions for Playlist model.
+ * CourseController implements the CRUD actions for Course model.
  */
-class PlaylistController extends Controller
+class CourseController extends Controller
 {
     /**
      * @inheritDoc
@@ -34,14 +34,14 @@ class PlaylistController extends Controller
     }
 
     /**
-     * Lists all Playlist models.
+     * Lists all Course models.
      *
      * @return string
      */
     public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
-            'query' => Playlist::find(),
+            'query' => Course::find(),
         ]);
 
         return $this->render('index', [
@@ -50,7 +50,7 @@ class PlaylistController extends Controller
     }
 
     /**
-     * Displays a single Playlist model.
+     * Displays a single Course model.
      * @param int $id ID
      * @return string
      * @throws NotFoundHttpException if the model cannot be found
@@ -62,14 +62,14 @@ class PlaylistController extends Controller
         ]);
     }
 
-        /**
-     * Creates a new Playlist model.
+    /**
+     * Creates a new Course model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return string|\yii\web\Response
      */
     public function actionCreate()
     {
-        $model = new Playlist();
+        $model = new Course();
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post())) {
@@ -78,7 +78,6 @@ class PlaylistController extends Controller
                 $extension=$model->imageFile->extension;
                 $model->imageFile->saveAs(\Yii::getAlias('@frontend').'/web/uploads/poster/'.$name.'.'.$extension);
                 $model->course_poster=$name.'.'.$extension;
-                $model->course_price=trim($model->course_price);
                 if($model->save(false)) {
                     return $this->redirect(['view', 'id' => $model->id]);
                 }
@@ -93,7 +92,7 @@ class PlaylistController extends Controller
     }
 
     /**
-     * Updates an existing Playlist model.
+     * Updates an existing Course model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param int $id ID
      * @return string|\yii\web\Response
@@ -117,7 +116,7 @@ class PlaylistController extends Controller
                 }
             }else
             {
-               $model->save();
+                $model->save();
             }
             return $this->redirect(['view', 'id' => $model->id]);
         }
@@ -128,7 +127,7 @@ class PlaylistController extends Controller
     }
 
     /**
-     * Deletes an existing Playlist model.
+     * Deletes an existing Course model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param int $id ID
      * @return \yii\web\Response
@@ -154,15 +153,15 @@ class PlaylistController extends Controller
     }
 
     /**
-     * Finds the Playlist model based on its primary key value.
+     * Finds the Course model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param int $id ID
-     * @return Playlist the loaded model
+     * @return Course the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Playlist::findOne(['id' => $id])) !== null) {
+        if (($model = Course::findOne(['id' => $id])) !== null) {
             return $model;
         }
 

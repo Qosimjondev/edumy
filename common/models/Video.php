@@ -13,30 +13,16 @@ use yii\behaviors\TimestampBehavior;
  * @property string $video_title
  * @property string|null $video_description
  * @property string $video_url
- * @property string $course_title
- * @property int|null $status
+ * @property int|null $course_id
+ * @property int|null $created_by
  * @property int|null $created_at
- * @property int|null $updated_at
- * @property int $created_by
+ * @property int|null $status
  *
+ * @property Course $course
  * @property User $createdBy
  */
 class Video extends \yii\db\ActiveRecord
 {
-    public function behaviors()
-    {
-        return [
-            [
-                'class'=>BlameableBehavior::class,
-                'updatedByAttribute' => false,
-                'createdByAttribute' => 'created_by'
-            ],
-            [
-                'class'=>TimestampBehavior::class,
-                'createdAtAttribute' => 'created_at'
-            ]
-        ];
-    }
     const UN_PUBLISHED=0;
     const PUBLISHED=1;
     /**
@@ -46,6 +32,19 @@ class Video extends \yii\db\ActiveRecord
     {
         return 'video';
     }
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => BlameableBehavior::class,
+                'updatedByAttribute' => false
+            ],
+            [
+                'class' => TimestampBehavior::class,
+                'updatedAtAttribute' => false
+            ]
+        ];
+    }
 
     /**
      * {@inheritdoc}
@@ -53,11 +52,13 @@ class Video extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['video_title', 'video_url', 'course_title'], 'required'],
+            [['video_title', 'video_url'], 'required'],
             [['video_description'], 'string'],
-            [['status', 'created_at', 'updated_at', 'created_by'], 'integer'],
-            [['video_title', 'course_title'], 'string', 'max' => 255],
+            [['course_id', 'created_by', 'created_at'], 'integer'],
+            [['status'],'integer'],
+            [['video_title'], 'string', 'max' => 255],
             [['video_url'], 'string', 'max' => 512],
+            [['course_id'], 'exist', 'skipOnError' => true, 'targetClass' => Course::className(), 'targetAttribute' => ['course_id' => 'id']],
             [['created_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['created_by' => 'id']],
         ];
     }
@@ -72,12 +73,20 @@ class Video extends \yii\db\ActiveRecord
             'video_title' => 'Video Title',
             'video_description' => 'Video Description',
             'video_url' => 'Video Url',
-            'course_title' => 'Course Title',
-            'status' => 'Status',
+            'course_id' => 'Course ID',
             'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
-            'created_by' => 'Created By',
+            'status'=>'Video status'
         ];
+    }
+
+    /**
+     * Gets query for [[Course]].
+     *
+     * @return \yii\db\ActiveQuery|\common\models\query\CourseQuery
+     */
+    public function getCourse()
+    {
+        return $this->hasOne(Course::className(), ['id' => 'course_id']);
     }
 
     /**
@@ -98,12 +107,11 @@ class Video extends \yii\db\ActiveRecord
     {
         return new \common\models\query\VideoQuery(get_called_class());
     }
-    public function getStatusLabels()
+    public function getVideoStatus()
     {
         return [
             self::UN_PUBLISHED,
             self::PUBLISHED,
         ];
     }
-
 }

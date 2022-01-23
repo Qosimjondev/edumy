@@ -16,13 +16,13 @@ use yii\helpers\Url;
             <div class="dashbord_nav_list">
                 <ul>
                     <li class="active"><a href="<?= Url::to(['site/index'])?>"><span class="flaticon-puzzle-1"></span> Dashboard</a></li>
-                    <li><a href="<?= Url::to(['playlist/index'])?>"><span class="flaticon-online-learning"></span> My Courses</a></li>
+                    <li><a href="<?= Url::to(['course/index'])?>"><span class="flaticon-online-learning"></span> My Courses</a></li>
                     <li><a href="<?= Url::to(['video/index'])?>"><span class="flaticon-elearning-1"></span> Video List</a></li>
                     <li><a href="#"><span class="flaticon-speech-bubble"></span> Messages</a></li>
                     <li><a href="#"><span class="flaticon-rating"></span> Reviews</a></li>
                     <li><a href="#"><span class="flaticon-like"></span> Bookmarks</a></li>
                     <li><a href="<?= Url::to(['video/create'])?>"><span class="flaticon-pencil"></span> Add Video</a></li>
-                    <li><a href="<?= Url::to(['playlist/create'])?>"><span class="flaticon-add-contact"></span> Add listing</a></li>
+                    <li><a href="<?= Url::to(['course/create'])?>"><span class="flaticon-add-contact"></span> Add listing</a></li>
                 </ul>
                 <h4>Account</h4>
                 <ul>

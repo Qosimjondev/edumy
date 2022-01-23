@@ -12,9 +12,6 @@ use yii\widgets\ActiveForm;
 <div class="col-lg-12">
     <div class="playlist-form">
         <?php
-        $course=Video::find()->all();
-        $item=ArrayHelper::map($course,'id','course_title');
-        $prompt=['prompt'=>'Select course title...'];
         $select=[
             'Dasturlash' =>[
                 'Web Dasturlash'=>'Web Dasturlash',
@@ -31,14 +28,14 @@ use yii\widgets\ActiveForm;
             'Moliya va Biznes' =>'Moliya va Biznes',
             'Xorijiy tillar'=>'Xorijiy tillar'
         ];
-        $choice=['prompt'=>'Course category...']
+        $choice=['prompt'=>'Course category...'];
         ?>
 
         <?php $form = ActiveForm::begin([
             'options'=>['enctype'=>'multipart/form-data']
         ]); ?>
 
-        <?= $form->field($model, 'course_title')->dropDownList($item,$prompt) ?>
+        <?= $form->field($model, 'course_title')->textInput() ?>
 
         <?= $form->field($model, 'course_price')->textInput(['id'=>'narx']) ?>
 

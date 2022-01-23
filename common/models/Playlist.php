@@ -102,6 +102,10 @@ class Playlist extends \yii\db\ActiveRecord
         $model=Video::findOne($id);
         return $model->course_title;
     }
+//    public function getCourseCount($id)
+//    {
+//        $model=Video::find()->where([''])
+//    }
     /**
      * {@inheritdoc}
      * @return \common\models\query\PlaylistQuery the active query used by this AR class.

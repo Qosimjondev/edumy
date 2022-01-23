@@ -3,41 +3,40 @@
 use yii\db\Migration;
 
 /**
- * Handles the creation of table `{{%video}}`.
+ * Handles the creation of table `{{%course}}`.
  * Has foreign keys to the tables:
  *
  * - `{{%user}}`
  */
-class m220113_192033_create_video_table extends Migration
+class m220123_130351_create_course_table extends Migration
 {
     /**
      * {@inheritdoc}
      */
     public function safeUp()
     {
-        $this->createTable('{{%video}}', [
+        $this->createTable('{{%course}}', [
             'id' => $this->primaryKey(),
-            'video_title' => $this->string(255)->notNull(),
-            'video_description' => $this->text(),
-            'video_url' => $this->string(512)->notNull(),
             'course_title' => $this->string(255)->notNull(),
-            'status' => $this->integer(1)->defaultValue(0),
+            'course_price' => $this->integer(11)->defaultValue(0),
+            'course_description' => $this->text(),
+            'course_poster' => $this->string(255)->notNull(),
+            'course_author' => $this->string(255)->notNull(),
+            'created_by' => $this->integer(11),
             'created_at' => $this->integer(11),
-            'updated_at' => $this->integer(11),
-            'created_by' => $this->integer(11)->notNull(),
         ]);
 
         // creates index for column `created_by`
         $this->createIndex(
-            '{{%idx-video-created_by}}',
-            '{{%video}}',
+            '{{%idx-course-created_by}}',
+            '{{%course}}',
             'created_by'
         );
 
         // add foreign key for table `{{%user}}`
         $this->addForeignKey(
-            '{{%fk-video-created_by}}',
-            '{{%video}}',
+            '{{%fk-course-created_by}}',
+            '{{%course}}',
             'created_by',
             '{{%user}}',
             'id',
@@ -52,16 +51,16 @@ class m220113_192033_create_video_table extends Migration
     {
         // drops foreign key for table `{{%user}}`
         $this->dropForeignKey(
-            '{{%fk-video-created_by}}',
-            '{{%video}}'
+            '{{%fk-course-created_by}}',
+            '{{%course}}'
         );
 
         // drops index for column `created_by`
         $this->dropIndex(
-            '{{%idx-video-created_by}}',
-            '{{%video}}'
+            '{{%idx-course-created_by}}',
+            '{{%course}}'
         );
 
-        $this->dropTable('{{%video}}');
+        $this->dropTable('{{%course}}');
     }
 }
