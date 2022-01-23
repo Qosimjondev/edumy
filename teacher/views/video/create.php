@@ -77,7 +77,10 @@ use yii\helpers\Url;
                         </div>
                         <div class="col-xl-6">
                             <div class="my_profile_setting_input form-group">
-                                <?= $form->field($model,'status')->dropDownList($model->getVideoStatus())?>
+                                <?= $form->field($model,'status')->dropDownList([
+                                        0 => 'UN_PUBLISHED',
+                                        1 => 'PUBLISHED'
+                                ])?>
                             </div>
                         </div>
                         <div class="col-lg-12">

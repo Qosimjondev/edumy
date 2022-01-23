@@ -3,6 +3,8 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\BlameableBehavior;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "course".
@@ -29,6 +31,20 @@ class Course extends \yii\db\ActiveRecord
     {
         return 'course';
     }
+    public function behaviors()
+    {
+        return  [
+            [
+                'class'=>BlameableBehavior::class,
+                'updatedByAttribute' => false
+            ],
+            [
+                'class'=>TimestampBehavior::class,
+                'updatedAtAttribute' => false
+            ]
+        ];
+    }
+
     public $imageFile;
     /**
      * {@inheritdoc}

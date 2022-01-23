@@ -37,7 +37,14 @@ $this->params['breadcrumbs'][] = $this->title;
                         return $data->video_url.'<br>'.Html::a('Open',['open','id'=>$data->id]);
                     }
             ],
-            'course_title',
+//            'course_id',
+            [
+                    'attribute' => 'course_title',
+                    'content' => function($data)
+                    {
+                        return $data->course->course_title;
+                    }
+            ],
             //'status',
             //'created_at',
             //'updated_at',

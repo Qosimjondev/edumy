@@ -10,7 +10,7 @@
         </tr>
         <tr>
             <td>Kurs muallifi</td>
-            <td><?= $model->course_auhtor ?></td>
+            <td><?= $model->course_author ?></td>
         </tr>
         <tr>
             <td>Kategoriya</td>
