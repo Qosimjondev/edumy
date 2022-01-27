@@ -2,50 +2,37 @@
 <section class="footer_one">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 col-md-4 col-md-3 col-lg-3">
+            <div class="col-sm-6 col-md-4 col-md-3 col-lg-3" >
                 <div class="footer_contact_widget">
-                    <h4>CONTACT</h4>
-                    <p>329 Queensberry Street, North Melbourne </p>
-                    <p>VIC 3051, Australia.</p>
-                    <p>123 456 7890</p>
-                    <p><a href="https://grandetest.com/cdn-cgi/l/email-protection" class="__cf_email__"
-                          data-cfemail="9be8eeebebf4e9efdbfeffeef6e2b5f8f4f6">[email&#160;protected]</a></p>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-md-3 col-lg-2">
-                <div class="footer_company_widget">
-                    <h4>COMPANY</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="page-contact.html">Contact</a></li>
-                        <li><a href="#">Become a Teacher</a></li>
-                    </ul>
+                    <h4>Bog'lanish</h4>
+                    <span class="flaticon-user"> Andijon shahri Yangi Bozor 18/2</span>
+                    <span class="flaticon-phone-call">+998999990099</span><br>
+                    <span class="flaticon-email"> Email</span>
                 </div>
             </div>
             <div class="col-sm-6 col-md-4 col-md-3 col-lg-2">
                 <div class="footer_program_widget">
-                    <h4>PROGRAMS</h4>
+                    <h4>Kurslar</h4>
                     <ul class="list-unstyled">
-                        <li><a href="#">Nanodegree Plus</a></li>
-                        <li><a href="#">Veterans</a></li>
-                        <li><a href="#">Georgia</a></li>
-                        <li><a href="#">Self-Driving Car</a></li>
+                        <li><a href="#">IT va Dasturlash</a></li>
+                        <li><a href="#">Komputer grafikasi</a></li>
+                        <li><a href="#">Moliya va biznes</a></li>
+                        <li><a href="#">Xorijiy tillar</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-sm-6 col-md-4 col-md-3 col-lg-2">
                 <div class="footer_support_widget">
-                    <h4>SUPPORT</h4>
+                    <h4>Qo'llab quvvatlash</h4>
                     <ul class="list-unstyled">
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Forums</a></li>
-                        <li><a href="#">Language Packs</a></li>
-                        <li><a href="#">Release Status</a></li>
+                        <li><a href="#">Bog'lanish</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Ro'yxatdan o'tish</a></li>
+                        <li><a href="#">Kirish</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-6 col-md-3 col-lg-3">
+            <div class="col-sm-12 col-md-6 col-md-3 col-lg-3">
                 <div class="footer_apps_widget">
                     <h4>MOBILE</h4>
                     <div class="app_grid">
@@ -54,7 +41,7 @@
 									<span class="flaticon-apple"></span>
 								</span>
                             <span class="title">App Store</span>
-                            <span class="subtitle">Available now on the</span>
+                            <span class="subtitle">Get in on</span>
                         </button>
                         <button class="play_store_btn btn-dark">
 								<span class="icon">

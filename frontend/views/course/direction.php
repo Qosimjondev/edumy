@@ -8,21 +8,10 @@ use yii\helpers\Url;
 <section id="our-courses" class="our-courses pt90 pt650-992">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <a href="#our-courses">
-                    <div class="mouse_scroll">
-                        <div class="icon"><span class="flaticon-download-arrow"></span></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
             <div class="col-lg-6 offset-lg-3">
                 <div class="main-title text-center">
-                    <h3 class="mt0">Via School Categories Courses</h3>
-                    <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+                    <h3 class="mt0">Yo'nalishlar</h3>
+                    <p>Eng ommabop zamonaviy kurs yo'nalishlari</p>
                 </div>
             </div>
         </div>
@@ -109,7 +98,7 @@ use yii\helpers\Url;
             </div>
             <div class="col-lg-6 offset-lg-3">
                 <div class="courses_all_btn text-center">
-                    <a class="btn btn-transparent" href="#">View All Courses</a>
+                    <a class="btn btn-transparent" href="#">Barcha kurslar</a>
                 </div>
             </div>
         </div>

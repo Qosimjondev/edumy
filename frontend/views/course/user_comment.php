@@ -8,8 +8,7 @@ use yii\helpers\Url;
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
                 <div class="main-title text-center">
-                    <h3 class="mt0">What People Say</h3>
-                    <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+                    <h3 class="mt0">Foydalanuvchilarning fikrlari</h3>
                 </div>
             </div>
         </div>

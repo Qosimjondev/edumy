@@ -2057,7 +2057,9 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last{
   text-transform: uppercase;
 }
 .home1-mainslider .home-content{
-  padding-top: 150px;
+  position: relative;
+  bottom: 50px;
+  padding-bottom: 50px;
 }
 .home_iconbox_container{
   margin-bottom: 120px;
@@ -2205,7 +2207,7 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last{
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-size: 14px;
+  font-size: 30px;
   text-align: center;
   -webkit-transition: all .4s ease;
   -moz-transition: all .4s ease;
@@ -2224,6 +2226,7 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last{
 }
 .main-banner-wrapper .carousel-btn-block .carousel-btn.left-btn i {
   margin-right: 15px;
+
 }
 .main-banner-wrapper .carousel-btn-block .carousel-btn.right-btn {
   margin-right: 10px;
@@ -2232,6 +2235,7 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last{
 }
 .main-banner-wrapper .carousel-btn-block .carousel-btn.right-btn i {
   margin-left: 15px;
+
 }
 .main-banner-wrapper .carousel-btn-block .carousel-btn span.left,
 .main-banner-wrapper .carousel-btn-block .carousel-btn span.right{

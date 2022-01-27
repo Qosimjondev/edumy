@@ -3,9 +3,9 @@
         <div class="row">
             <div class="col-lg-8 offset-lg-2 text-center">
                 <div class="divider-one">
-                    <p class="color-white">STARTING ONLINE LEARNING</p>
-                    <h1 class="color-white text-uppercase">Enhance your skIlls wIth best OnlIne courses</h1>
-                    <a class="btn btn-transparent divider-btn" href="#">Get Started Now</a>
+                    <h2 class="color-white">Siz malakali o'qituvchimisiz ?</h2>
+                    <p class="color-white">Agar siz o‘z sohangizda tajribali mutaxassis bo‘lsangiz, bizning jamoa sizni hamkorlikka chorlaydi. Biz bilan hamkorlikda kurslar yarating hamda mo‘may daromad egasiga aylaning!</p>
+                    <a class="btn btn-transparent divider-btn" href="#">O'qituvchi bo'lish</a>
                 </div>
             </div>
         </div>

@@ -8,8 +8,8 @@ use yii\helpers\Url;
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
                 <div class="main-title text-center">
-                    <h3 class="mt0">Browse Our Top Courses</h3>
-                    <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+                    <h3 class="mt0">Ommabop kurslar</h3>
+                    <p>Eng ko'p sotib olingan video darslar</p>
                 </div>
             </div>
         </div>
