@@ -80,7 +80,7 @@ IeAsset::register($this);
 
         <?= $content ?>
 
-<?=$this->render('footer'); ?>
+        <?=$this->render('footer'); ?>
 
     </div>
     <?php $this->endBody() ?>

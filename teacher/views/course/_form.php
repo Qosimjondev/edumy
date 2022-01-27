@@ -1,5 +1,7 @@
 <?php
 
+use common\models\Category;
+use common\models\Group;
 use common\models\Video;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
@@ -12,23 +14,9 @@ use yii\widgets\ActiveForm;
 <div class="col-lg-12">
     <div class="playlist-form">
         <?php
-        $select=[
-            'Dasturlash' =>[
-                'Web Dasturlash'=>'Web Dasturlash',
-                'Mobile Dasturlash'=>'Mobile Dasturlash',
-                'Desktop Dasturlash'=>'Desktop Dasturlash'
-            ],
-            'Komputer grafikasi'=>[
-                'Web dizayn'=>'Web dizayn',
-                'Branding'=>'Branding',
-                'Motion grafika'=>'Motion grafika',
-                'Modellashtirish'=>'Modellashtirish',
-                'Video montaj'=>'Video montaj'
-            ],
-            'Moliya va Biznes' =>'Moliya va Biznes',
-            'Xorijiy tillar'=>'Xorijiy tillar'
-        ];
-        $choice=['prompt'=>'Course category...'];
+        $select=Category::find()->all();
+        $item=ArrayHelper::map($select,'g_id','c_name');
+        $prompt=['prompt' => 'Select category...'];
         ?>
 
         <?php $form = ActiveForm::begin([
@@ -43,7 +31,7 @@ use yii\widgets\ActiveForm;
 
         <?= $form->field($model, 'imageFile')->fileInput()->label(false) ?>
 
-        <?= $form->field($model, 'course_categ')->dropDownList($select,$choice) ?>
+        <?= $form->field($model, 'course_categ')->dropDownList($item,$prompt) ?>
 
         <?= $form->field($model, 'course_author')->textInput() ?>
 
