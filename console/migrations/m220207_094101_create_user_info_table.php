@@ -20,7 +20,7 @@ class m220207_094101_create_user_info_table extends Migration
             'username' => $this->string(255),
             'password' => $this->string(512),
             'user_photo' => $this->string(512),
-            'phone_number' => $this->integer(9),
+            'phone_number' => $this->string(512),
             'email' => $this->string(255),
             'age' => $this->integer(3),
             'gender' => $this->string(255),

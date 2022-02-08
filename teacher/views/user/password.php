@@ -4,7 +4,7 @@
 use yii\bootstrap4\ActiveForm;
 use yii\helpers\Html;
 
-$this->title="Update user phone number";
+$this->title="Update user password";
 ?>
 <div class="col-lg-12">
     <div class="user-info-update">
@@ -14,11 +14,9 @@ $this->title="Update user phone number";
             <div class="col-lg-6">
                 <?php $form = ActiveForm::begin(); ?>
 
-                <?php echo $form->field($model,'phone_number')->textInput(
-                        [
-                            'required'
-                        ])
-                    ->label('Format: 998991001010')?>
+                <?php echo $form->field($model,'password')->input('password',['minlength'=>8])?>
+                <span   style="font-size: 15px;line-height: 10px;color: red;">Note!!! password must be include letters and numbers</span><br>
+                <?php echo $form->field($model,'password_repeat')->input('password')?>
             </div>
         </div>
         <div class="row">
@@ -28,7 +26,7 @@ $this->title="Update user phone number";
                         [
                             'class' => 'btn btn-outline-success btn-shadow-primary',
                             'style'=>[
-                                    'margin-right'=>'10px'
+                                'margin-right'=>'10px'
                             ],
                         ]) ?>
                 </p>

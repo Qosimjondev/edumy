@@ -11,6 +11,7 @@ use yii\behaviors\BlameableBehavior;
  * @property int $id
  * @property string|null $username
  * @property string|null $password
+ * @property string|null $password_repeat
  * @property string|null $user_photo
  * @property int|null $phone_number
  * @property string|null $email
@@ -23,6 +24,7 @@ use yii\behaviors\BlameableBehavior;
 class UserInfo extends \yii\db\ActiveRecord
 {
     public $img;
+    public $password_repeat;
     /**
      * {@inheritdoc}
      */
@@ -47,8 +49,10 @@ class UserInfo extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['phone_number', 'age','user_id'], 'integer'],
-            [['password'],'string','max'=>512],
+            [['phone_number','user_id'], 'integer'],
+            [['password','password_repeat'],'string','max'=>512],
+            [['age'],'integer','min'=>2,'max'=>3],
+            ['password','compare','compareAttribute'=>'password_repeat'],
             [['username', 'position'], 'string', 'max' => 100],
             [['user_photo', 'email', 'location'], 'string', 'max' => 255],
             [['gender'], 'string', 'max' => 50],

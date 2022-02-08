@@ -12,9 +12,9 @@ $this->title="Shaxsiy Ma'lumotlar";
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <div class="userInfoUpdateButtons d-flex" style="flex-direction: row-reverse; letter-spacing: 1px; margin-bottom:2  0px ">
+    <div class="userInfoUpdateButtons d-flex" style="flex-direction: row-reverse; letter-spacing: 1px; margin-bottom:20px ">
         <p>
-            <?= Html::a("<i class='fa fa-lock'></i> Parolni O'zgartirish",['setting'],
+            <?= Html::a("<i class='fa fa-lock'></i> Parolni O'zgartirish",['change-password','id'=>$model->id],
                 [
                     'class' => 'btn btn-outline-danger',
                     'style'=>[

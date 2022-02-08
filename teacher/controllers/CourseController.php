@@ -104,28 +104,7 @@ class CourseController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-        $oldImg=$model->course_poster;
-        if ( $model->load($this->request->post())) {
-            $model->imageFile=UploadedFile::getInstance($model,'imageFile');
-            if($model->imageFile)
-            {
-                $name=$this->getSecurity();
-                $extension=$model->imageFile->extension;
-                $imagePath=\Yii::getAlias('@frontend').'/web/uploads/poster/'.$name.'.'.$model->imageFile->extension;
-                $model->imageFile->saveAs($imagePath);
-                Image::resize($imagePath,307,200,false,['quality'=>80])->save();
-                $model->course_poster=$name.'.'.$extension;
-                if(unlink(\Yii::getAlias('@frontend').'/web/uploads/poster/'.$oldImg))
-                {
-                    $model->save(false);
-                }
-            }
-            else
-            {
-                $model->save();
-            }
-            return $this->redirect(['view', 'id' => $model->id]);
-        }
+        $this->saveImg($id);
 
         return $this->render('update', [
             'model' => $model,
@@ -176,7 +155,29 @@ class CourseController extends Controller
     protected  function getSecurity()
     {
         $sec=new Security();
-        $name=$sec->generateRandomString(8);
-        return $name;
+        return  $sec->generateRandomString(8);;
+    }
+    protected function saveImg($id)
+    {
+        $model = $this->findModel($id);
+        $oldImg=$model->course_poster;
+        if ( $model->load($this->request->post())) {
+            $model->imageFile=UploadedFile::getInstance($model,'imageFile');
+            if($model->imageFile)
+            {
+                $name=$this->getSecurity();
+                $extension=$model->imageFile->extension;
+                $imagePath=\Yii::getAlias('@frontend').'/web/uploads/poster/'.$name.'.'.$model->imageFile->extension;
+                $model->imageFile->saveAs($imagePath);
+                Image::resize($imagePath,50,50,false,['quality'=>80])->save();
+                $model->course_poster=$name.'.'.$extension;
+                if(!empty($oldImg))
+                {
+                    unlink(\Yii::getAlias('@frontend').'/web/uploads/poster/'.$oldImg);
+                }
+                $model->save(false);
+            }
+            return $this->redirect(['view', 'id' => $model->id]);
+        }
     }
 }
