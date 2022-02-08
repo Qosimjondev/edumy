@@ -7,7 +7,10 @@ use yii\helpers\Url;
 $this->title = 'Edumy';
 ?>
 
-<?php echo $this->render('/course/new_course')?>
+<?php
+    $url=Yii::$app->basePath.'/views/course/index.php';
+    include $url;
+?>
 
 <?php echo $this->render('/course/top_courses')?>
 

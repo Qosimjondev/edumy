@@ -20,7 +20,8 @@
         "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
         "yiisoft/yii2-bootstrap5": "^2.0",
         "lesha724/yii2-youtube-widget": "*",
-        "tuyakhov/yii2-youtube": "*"
+        "tuyakhov/yii2-youtube": "*",
+        "yiisoft/yii2-imagine": "^2.3"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

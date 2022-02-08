@@ -3,11 +3,11 @@
 namespace common\models\query;
 
 /**
- * This is the ActiveQuery class for [[\common\models\Course]].
+ * This is the ActiveQuery class for [[\common\models\UserInfo]].
  *
- * @see \common\models\Course
+ * @see \common\models\UserInfo
  */
-class CourseQuery extends \yii\db\ActiveQuery
+class UserInfoQuery extends \yii\db\ActiveQuery
 {
     /*public function active()
     {
@@ -16,7 +16,7 @@ class CourseQuery extends \yii\db\ActiveQuery
 
     /**
      * {@inheritdoc}
-     * @return \common\models\Course[]|array
+     * @return \common\models\UserInfo[]|array
      */
     public function all($db = null)
     {
@@ -25,14 +25,10 @@ class CourseQuery extends \yii\db\ActiveQuery
 
     /**
      * {@inheritdoc}
-     * @return \common\models\Course|array|null
+     * @return \common\models\UserInfo|array|null
      */
     public function one($db = null)
     {
         return parent::one($db);
-    }
-    public function getAuthor($id)
-    {
-        return $this->andWhere(['created_by' => $id]);
     }
 }

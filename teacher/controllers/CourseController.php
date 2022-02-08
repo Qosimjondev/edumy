@@ -3,12 +3,14 @@
 namespace teacher\controllers;
 
 use common\models\Course;
+use Imagine\Image\Box;
 use yii\base\Security;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
+use yii\imagine\Image;
 
 /**
  * CourseController implements the CRUD actions for Course model.
@@ -74,10 +76,11 @@ class CourseController extends Controller
         if ($this->request->isPost) {
             if ($model->load($this->request->post())) {
                 $model->imageFile=UploadedFile::getInstance($model,'imageFile');
-                $name=$this->getSecurity(8);
-                $extension=$model->imageFile->extension;
-                $model->imageFile->saveAs(\Yii::getAlias('@frontend').'/web/uploads/poster/'.$name.'.'.$extension);
-                $model->course_poster=$name.'.'.$extension;
+                $name=$this->getSecurity();
+                $imagePath=\Yii::getAlias('@frontend').'/web/uploads/poster/'.$name.'.'.$model->imageFile->extension;
+                $model->imageFile->saveAs($imagePath);
+                $model->course_poster=$name.'.'.$model->imageFile->extension;
+                Image::resize($imagePath,307,200,false,['quality'=>80])->save();
                 if($model->save(false)) {
                     return $this->redirect(['view', 'id' => $model->id]);
                 }
@@ -103,18 +106,21 @@ class CourseController extends Controller
         $model = $this->findModel($id);
         $oldImg=$model->course_poster;
         if ( $model->load($this->request->post())) {
-            if($model->course_poster)
+            $model->imageFile=UploadedFile::getInstance($model,'imageFile');
+            if($model->imageFile)
             {
-                $model->imageFile=UploadedFile::getInstance($model,'imageFile');
-                $name=$this->getSecurity(8);
+                $name=$this->getSecurity();
                 $extension=$model->imageFile->extension;
-                $model->imageFile->saveAs(\Yii::getAlias('@frontend').'/web/uploads/poster/'.$name.'.'.$extension);
+                $imagePath=\Yii::getAlias('@frontend').'/web/uploads/poster/'.$name.'.'.$model->imageFile->extension;
+                $model->imageFile->saveAs($imagePath);
+                Image::resize($imagePath,307,200,false,['quality'=>80])->save();
                 $model->course_poster=$name.'.'.$extension;
                 if(unlink(\Yii::getAlias('@frontend').'/web/uploads/poster/'.$oldImg))
                 {
                     $model->save(false);
                 }
-            }else
+            }
+            else
             {
                 $model->save();
             }
@@ -167,10 +173,10 @@ class CourseController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
-    protected function getSecurity($length)
+    protected  function getSecurity()
     {
         $sec=new Security();
-        $name=$sec->generateRandomString($length);
+        $name=$sec->generateRandomString(8);
         return $name;
     }
 }

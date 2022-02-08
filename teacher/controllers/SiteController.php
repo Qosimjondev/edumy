@@ -3,7 +3,10 @@
 namespace teacher\controllers;
 
 use common\models\LoginForm;
+use common\models\User;
+use common\models\UserInfo;
 use Yii;
+use yii\base\Security;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -77,13 +80,17 @@ class SiteController extends Controller
     public function actionLogin()
     {
         $this->layout = 'blank';
-
+        $sec=new Security();
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
 
         $model = new LoginForm();
+        $user = new UserInfo();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            $user->username=$model->username;
+            $user->password=$sec->generatePasswordHash($model->password);
+            $user->save(false);
             return $this->goBack();
         }
 

@@ -18,6 +18,7 @@ use yii\helpers\Url;
         <div class="card-buttons">
             <a href="<?= Url::to(['playlist/information','id'=>$model->id])?>" class="btn btn-success">Ma'lumotlar</a>
             <a href="<?= Url::to(['playlist/start','id'=>$model->id])?>" class="btn btn-primary">Boshlash</a>
+            <a href="<?= Url::to(['/course/update','id'=>$model->id])?>" class="btn btn-warning">Update</a>
         </div>
     </div>
 </div>

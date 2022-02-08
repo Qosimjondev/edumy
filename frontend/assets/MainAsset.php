@@ -46,6 +46,7 @@ class MainAsset extends AssetBundle
         'js/timepicker.js',
         'js/googlemaps1.js',
         'js/script.js',
+        'js/app.js',
         "https://maps.googleapis.com/maps/api/js?key=AIzaSyAAz77U5XQuEME6TpftaMdX0bBelQxXRlM&amp;callback=initMap",
 
     ];

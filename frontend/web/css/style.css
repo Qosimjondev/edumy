@@ -3552,6 +3552,7 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last{
 }
 .top_courses .details .tc_content{
   padding: 20px;
+  padding-bottom: 50px;
 }
 .top_courses .details .tc_content p{
   color: #7e7e7e;
@@ -4936,7 +4937,10 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last{
 .our-team.instructor-page .owl-carousel .owl-stage-outer{
   padding: 30px 0px;
 }
-
+/*.popular_course_slider .owl-stage-outer .owl-stage {*/
+/*  transform: translate3d(-1352.28px, 0px, 0px)!important;*/
+/*  transition: all 0s ease 0s; width: 4868.21px!important;*/
+/*}*/
 
 .team_member{
   background-color: #ffffff;
@@ -9074,9 +9078,6 @@ ul.mc_parent_list ul.mc_child_list:hover .pricing_btn{
 .bgc-thm {
   background-color: #2441e7 !important;
 }
-.bgc-thm2 {
-  background-color: #192675 !important;
-}
 .bgc-fb {
   background-color: #3B5998;
 }
@@ -12005,4 +12006,61 @@ textarea.form-control{
 .gallery_item .gallery_overlay .icon span{
   color: #ffffff;
   font-size: 50px;
+}
+#popular_course_item .item{
+  margin-right: 15px;
+}
+#button-controls{
+  -webkit-tap-highlight-color: transparent;
+}
+#button-controls .owl-nav{
+  margin-top: 10px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+
+}
+#button-controls .owl-prev{
+  left: -70px;
+  box-shadow: 2px 2px 5px 1px rgb(0 0 0 / 10%);
+  background-color: #ffffff !important;
+  color: #1c327e;
+  height: 50px;
+  line-height: 45px;
+  position: absolute;
+  top: 175px;
+  width: 50px;
+  user-select: none;
+  transition: 1s ease;
+}
+#button-controls .owl-next{
+  right: -70px;
+  background-color: #ffffff !important;
+  color: #1c327e;
+  height: 50px;
+  line-height: 45px;
+  position: absolute;
+  top: 175px;
+  width: 50px;
+  box-shadow: 2px 2px 5px 1px rgb(0 0 0 / 10%);
+  transition: 1s ease;
+}
+#button-controls .owl-dots {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+#button-controls .owl-nav [class*=owl-]{
+  font-size: 14px;
+  margin: 5px;
+  padding: 4px 7px;
+  background: #D6D6D6;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px;
+}
+#button-controls .owl-prev:hover,#button-controls .owl-next:hover{
+  background-color: #1b1bc6!important;
+  color: #FFFFFF;
+}
+#popular_course_item{
+  transition: 1s ease-in-out;
 }
