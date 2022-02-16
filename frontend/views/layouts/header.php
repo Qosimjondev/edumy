@@ -30,13 +30,31 @@ use yii\helpers\Url;
                             <div class="ht-widget-container">
                                 <div class="vertical-wrapper">
                                     <h2 class="title-vertical home5">
-                                        <span class="text-title">Library</span> <i class="fa fa-angle-down show-down" aria-hidden="true"></i>
+                                        <span class="text-title">Yo'nalishlar</span> <i class="fa fa-angle-down show-down" aria-hidden="true"></i>
                                     </h2>
                                     <div class="content-vertical home5">
                                         <ul id="vertical-menu" class="mega-vertical-menu nav navbar-nav">
-                                            <li><a href="#">Development</a></li>
-                                            <li><a href="#">Business</a></li>
-                                            <li><a href="#">IT & Software</a></li>
+                                            <li><a href="#">IT va dasturlash <b class="caret"></b></a>
+                                                <div class="element-wrapper">
+                                                    <div class="title-wrapper">
+                                                        <div class="element-wrapper-title">Topics</div>
+                                                    </div>
+                                                    <div class="widget-nav-menu">
+                                                        <div class="element-list-wrapper wn-menu">
+                                                            <ul class="element-menu-list">
+                                                                <li><a href="#">Color</a></li>
+                                                                <li><a href="#">Digital Painting</a></li>
+                                                                <li><a href="#">Drawing</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="element-warapper-btn">
+                                                        <a href="#"><div class="element-wrapper-sub-title">See All <i class="flaticon-right-arrow-1"></i></div></a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li><a href="#">Komputer grafikasi</a></li>
+                                            <li><a href="#">Moliya va biznes</a></li>
                                             <li>
                                                 <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Design <b class="caret"></b></a>
                                                 <div class="dropdown-menu vertical-megamenu" style="width: 748px;">
@@ -58,10 +76,6 @@ use yii\helpers\Url;
                                                                                                     <li><a href="#">Color</a></li>
                                                                                                     <li><a href="#">Digital Painting</a></li>
                                                                                                     <li><a href="#">Drawing</a></li>
-                                                                                                    <li><a href="#">Illustration</a></li>
-                                                                                                    <li><a href="#">Logo Design</a></li>
-                                                                                                    <li><a href="#">User Experience</a></li>
-                                                                                                    <li><a href="#">Web Design</a></li>
                                                                                                 </ul>
                                                                                             </div>
                                                                                         </div>
@@ -70,36 +84,7 @@ use yii\helpers\Url;
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-                                                                                <div class="col-lg-6">
-                                                                                    <div class="element-wrapper">
-                                                                                        <div class="title-wrapper">
-                                                                                            <div class="element-wrapper-title">Popular</div>
-                                                                                        </div>
-                                                                                        <div class="widget-nav-menu">
-                                                                                            <div class="element-list-wrapper wn-menu">
-                                                                                                <ul class="element-menu-list">
-                                                                                                    <li><a href="#">Color</a></li>
-                                                                                                    <li><a href="#">Digital Painting</a></li>
-                                                                                                    <li><a href="#">Drawing</a></li>
-                                                                                                    <li><a href="#">Illustration</a></li>
-                                                                                                    <li><a href="#">Logo Design</a></li>
-                                                                                                    <li><a href="#">User Experience</a></li>
-                                                                                                    <li><a href="#">Web Design</a></li>
-                                                                                                </ul>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="element-warapper-btn">
-                                                                                            <a href="#"><div class="element-wrapper-sub-title">See All <i class="flaticon-right-arrow-1"></i></div></a>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-lg-5 p0">
-                                                                            <div class="element-img-widget-wrapper">
-                                                                                <div class="element-widget-thumb">
-                                                                                    <a href="#"><img class="img-fluid" src="<?=Url::base()?>/images/resource/1.png" alt="1.png"></a>
-                                                                                </div>
+
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -109,11 +94,6 @@ use yii\helpers\Url;
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li><a href="#">Marketing</a></li>
-                                            <li><a href="#">Lifestyle</a></li>
-                                            <li><a href="#">Photography</a></li>
-                                            <li><a href="#">Education + Elearning</a></li>
-                                            <li><a href="#">Music</a></li>
                                         </ul>
                                     </div>
                                 </div>

@@ -246,7 +246,7 @@
   border-bottom-left-radius: 0px;
 }
 .vertical-wrapper .content-vertical .mega-vertical-menu > li .dropdown-menu.vertical-megamenu{
-  padding: 30px;
+  padding: 25px 15px 0px 30px;
 }
 .vertical-wrapper .content-vertical .mega-vertical-menu > li > a .caret{
   top: 15px;
