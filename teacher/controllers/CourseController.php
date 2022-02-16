@@ -169,7 +169,7 @@ class CourseController extends Controller
                 $extension=$model->imageFile->extension;
                 $imagePath=\Yii::getAlias('@frontend').'/web/uploads/poster/'.$name.'.'.$model->imageFile->extension;
                 $model->imageFile->saveAs($imagePath);
-                Image::resize($imagePath,50,50,false,['quality'=>80])->save();
+                Image::resize($imagePath,307,200,false,['quality'=>80])->save();
                 $model->course_poster=$name.'.'.$extension;
                 if(!empty($oldImg))
                 {

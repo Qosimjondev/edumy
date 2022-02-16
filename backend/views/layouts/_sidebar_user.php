@@ -25,8 +25,14 @@ $this->title='Education';
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="<?= Url::to(['site/logout'])?>" data-method="post">
+                <a class="sidebar-link" href="<?= Url::to(['/user/course'])?>" data-method="post">
                     <i class="align-middle" data-feather="file"></i> <span class="align-middle">Sertifikatlar</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="<?= Url::to(['/user/setting'])?>" data-method="post">
+                    <i class="align-middle" data-feather="user"></i> <span class="align-middle">Shaxsiy ma'lumotlar</span>
                 </a>
             </li>
 

@@ -13,6 +13,7 @@ class MainAsset extends AssetBundle
         'css/bootstrap.min.css',
         'css/style.css',
         'css/responsive.css',
+        'css/slider.css',
         [
             'href' => 'images/favicon.ico',
             'rel' => 'shortcut icon',

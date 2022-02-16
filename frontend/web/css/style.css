@@ -1589,7 +1589,7 @@ header.header-nav.menu_style_home_four.stricky-fixed{
     -o-box-shadow: 0px 0px 30px rgba(0,0,0,0.1);
     box-shadow: 0px 0px 30px rgba(0,0,0,0.1);
 }
-}
+
 header.header-nav.menu_style_home_four.stricky-fixed a.navbar_brand span{
   color: #0a0a0a;
 }
@@ -6154,9 +6154,6 @@ ul.mc_parent_list ul.mc_child_list:hover .pricing_btn{
   height: 50px;
   margin-right: 5px;
   width: 100px;
-}
-.ui_kit_tooltip .btn:hover {
-  color: 
 }
 .ui_kit_tooltip .btn:focus {
   box-shadow: none;

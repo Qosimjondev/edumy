@@ -8,6 +8,7 @@ use backend\assets\AppAsset;
 use common\widgets\Alert;
 use yii\bootstrap4\Breadcrumbs;
 use yii\bootstrap4\Html;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
@@ -44,10 +45,10 @@ AppAsset::register($this);
                                 <span class="text-dark"><?= Yii::$app->user->identity->username?></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="<?= Url::to(['/user/setting'])?>">
                                     <i class="align-middle" data-feather="user"></i>   Shaxsiy cabinet
                                 </a>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="<?= Url::to(['/site/logout'])?>">
                                     <i class="align-middle" data-feather="log-out"></i> Log out
                                 </a>
                             </div>

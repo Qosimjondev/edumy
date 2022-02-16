@@ -30,6 +30,12 @@ $this->title='Education';
                 </a>
             </li>
 
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="<?= Url::to(['/user/setting'])?>">
+                    <i class="align-middle" data-feather="user"></i> <span class="align-middle">Shaxsiy cabinet</span>
+                </a>
+            </li>
+
         </ul>
     </div>
 </nav>

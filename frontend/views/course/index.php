@@ -41,5 +41,4 @@ use yii\widgets\ListView;
             </div>
             </div>
         </div>
-    </div>
 </section>

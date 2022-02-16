@@ -24,11 +24,11 @@ return [
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
-            'identityCookie' => ['name' => '_identity-student', 'httpOnly' => true],
+            'identityCookie' => ['name' => '_identity', 'httpOnly' => true],
         ],
         'session' => [
             // this is the name of the session cookie used for login on the backend
-            'name' => 'advanced-student',
+            'name' => 'advanced_frontend',
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
