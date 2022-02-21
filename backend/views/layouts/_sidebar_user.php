@@ -12,24 +12,31 @@ $this->title='Education';
         </a>
 
         <ul class="sidebar-nav">
+            <!-- Home -->
             <li class="sidebar-item active">
                 <a class="sidebar-link" href="<?= Url::to(['site/index'])?>">
-                    <i class="align-middle" data-feather="book"></i> <span class="align-middle">Mening kurslarim</span>
+                    <i class="align-middle" data-feather="book"></i> <span class="align-middle">Home</span>
                 </a>
             </li>
-
+            <!--Add Course -->
             <li class="sidebar-item">
-                <a class="sidebar-link" href="<?= Url::to(['site/courses'])?>">
-                    <i class="align-middle" data-feather="list"></i> <span class="align-middle">Barcha kurslar</span>
+                <a class="sidebar-link" href="<?= Url::to(['/category/index'])?>">
+                    <i class="align-middle" data-feather="plus"></i> <span class="align-middle">Kurs qo'shish</span>
                 </a>
             </li>
-
+            <!-- Category-->
             <li class="sidebar-item">
-                <a class="sidebar-link" href="<?= Url::to(['/user/course'])?>" data-method="post">
-                    <i class="align-middle" data-feather="file"></i> <span class="align-middle">Sertifikatlar</span>
+                <a class="sidebar-link" href="<?= Url::to(['/group/index'])?>" data-method="post">
+                    <i class="align-middle" data-feather="inbox"></i> <span class="align-middle">Bo'limlar</span>
                 </a>
             </li>
-
+            <!-- Slider-->
+            <li class="sidebar-item active">
+                <a class="sidebar-link" href="<?= Url::to(['/slider/index'])?>">
+                    <i class="align-middle" data-feather="book"></i> <span class="align-middle">Slider</span>
+                </a>
+            </li>
+            <!-- Personal Information-->
             <li class="sidebar-item">
                 <a class="sidebar-link" href="<?= Url::to(['/user/setting'])?>" data-method="post">
                     <i class="align-middle" data-feather="user"></i> <span class="align-middle">Shaxsiy ma'lumotlar</span>

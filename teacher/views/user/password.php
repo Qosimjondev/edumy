@@ -1,5 +1,5 @@
 <?php
-/* @var $model \common\models\UserInfo */
+/* @var $model \common\models\Info */
 
 use yii\bootstrap4\ActiveForm;
 use yii\helpers\Html;
@@ -15,7 +15,6 @@ $this->title="Update user password";
                 <?php $form = ActiveForm::begin(); ?>
 
                 <?php echo $form->field($model,'password')->input('password',['minlength'=>8])?>
-                <span   style="font-size: 15px;line-height: 10px;color: red;">Note!!! password must be include letters and numbers</span><br>
                 <?php echo $form->field($model,'password_repeat')->input('password')?>
             </div>
         </div>

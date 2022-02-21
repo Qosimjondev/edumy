@@ -1,5 +1,5 @@
 <?php
-/* @var $model \common\models\UserInfo */
+/* @var $model \common\models\Info */
 
 use yii\bootstrap4\ActiveForm;
 use yii\helpers\Html;

@@ -41,5 +41,6 @@ phpunit.phar
 /backend/web/index.php
 /backend/web/index-test.php
 /backend/web/robots.txt
+/frontend/web/uploads/
 /frontend/web/uploads/poster
 /frontend/web/uploads/user

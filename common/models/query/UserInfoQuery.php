@@ -3,9 +3,9 @@
 namespace common\models\query;
 
 /**
- * This is the ActiveQuery class for [[\common\models\UserInfo]].
+ * This is the ActiveQuery class for [[\common\models\Info]].
  *
- * @see \common\models\UserInfo
+ * @see \common\models\Info
  */
 class UserInfoQuery extends \yii\db\ActiveQuery
 {
@@ -16,7 +16,7 @@ class UserInfoQuery extends \yii\db\ActiveQuery
 
     /**
      * {@inheritdoc}
-     * @return \common\models\UserInfo[]|array
+     * @return \common\models\Info[]|array
      */
     public function all($db = null)
     {
@@ -25,7 +25,7 @@ class UserInfoQuery extends \yii\db\ActiveQuery
 
     /**
      * {@inheritdoc}
-     * @return \common\models\UserInfo|array|null
+     * @return \common\models\Info|array|null
      */
     public function one($db = null)
     {

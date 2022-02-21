@@ -1,9 +1,9 @@
 <?php
 
-use common\models\UserInfo;
+use common\models\Info;
 use yii\helpers\Url;
 
-$model=UserInfo::findOne(['user_id'=>\Yii::$app->user->id]);
+$model=Info::findOne(['user_id'=>\Yii::$app->user->id]);
 
 ?>
 <li class="user_setting">

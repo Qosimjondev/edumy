@@ -55,7 +55,7 @@ IeAsset::register($this);
         <div class="preloader"></div>
 
         <?= $this->render("header") ?>
-        <?= $this->render("modal") ?>
+        <?= $this->render('modal.php') ?>
         <?= $this->render("navmobile") ?>
         <?php if (Yii::$app->controller->route == 'site/index'): ?>
             <?= $this->render('slider') ?>;

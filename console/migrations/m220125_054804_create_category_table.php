@@ -20,7 +20,6 @@ class m220125_054804_create_category_table extends Migration
             'id' => $this->primaryKey(),
             'c_name' => $this->string(255),
             'g_id' => $this->integer(11),
-            'created_by' => $this->integer(11),
         ]);
 
         // creates index for column `g_id`
@@ -40,22 +39,7 @@ class m220125_054804_create_category_table extends Migration
             'CASCADE'
         );
 
-        // creates index for column `created_by`
-        $this->createIndex(
-            '{{%idx-category-created_by}}',
-            '{{%category}}',
-            'created_by'
-        );
 
-        // add foreign key for table `{{%user}}`
-        $this->addForeignKey(
-            '{{%fk-category-created_by}}',
-            '{{%category}}',
-            'created_by',
-            '{{%user}}',
-            'id',
-            'CASCADE'
-        );
     }
 
     /**
@@ -72,18 +56,6 @@ class m220125_054804_create_category_table extends Migration
         // drops index for column `g_id`
         $this->dropIndex(
             '{{%idx-category-g_id}}',
-            '{{%category}}'
-        );
-
-        // drops foreign key for table `{{%user}}`
-        $this->dropForeignKey(
-            '{{%fk-category-created_by}}',
-            '{{%category}}'
-        );
-
-        // drops index for column `created_by`
-        $this->dropIndex(
-            '{{%idx-category-created_by}}',
             '{{%category}}'
         );
 

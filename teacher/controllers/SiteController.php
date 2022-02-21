@@ -4,7 +4,7 @@ namespace teacher\controllers;
 
 use common\models\LoginForm;
 use common\models\User;
-use common\models\UserInfo;
+use common\models\Info;
 use Yii;
 use yii\base\Security;
 use yii\filters\VerbFilter;
@@ -86,7 +86,7 @@ class SiteController extends Controller
         }
 
         $model = new LoginForm();
-        $user = new UserInfo();
+        $user = new Info();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             $user->username=$model->username;
             $user->password=$sec->generatePasswordHash($model->password);

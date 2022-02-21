@@ -293,6 +293,7 @@ address {
   text-align: center;
   top: -20px;
   width: 50px;
+  cursor: pointer;
 }
 .sign_up_modal .modal-header button.close{
   margin-top: -5px;
@@ -303,6 +304,7 @@ address {
 }
 .sign_up_modal .modal-header button.close span{
   color: #ffffff;
+  font-size: 28px;
 }
 .sign_up_modal .modal-header button.close span:focus{
   border: none;
@@ -311,11 +313,10 @@ address {
 }
 .sign_up_tab li.nav-item{
   text-align: center;
-  width: 50%;
+  width: 100%;
 }
 .sign_up_tab li.nav-item .nav-link{
   background-color: #f9fafc;
-  height: 70px;
   line-height: 65px;
   margin: 0;
   padding: 0;
@@ -324,7 +325,7 @@ address {
   border: none;
   color: #0a0a0a;
   font-family: 'Nunito', sans-serif;
-  font-size: 18px;
+  font-size: 28px;
   font-weight: bold;
 }
 .sign_up_tab li.nav-item .nav-link.active{
@@ -5820,7 +5821,7 @@ ul.mc_parent_list ul.mc_child_list:hover .pricing_btn{
   background-color: #f9fafc;
 }
 .login_form {
-  padding: 40px 40px 0;
+  padding: 10px 10px 0;
 }
 .sign_up_form .divide,
 .login_form .divide{
@@ -5906,13 +5907,15 @@ ul.mc_parent_list ul.mc_child_list:hover .pricing_btn{
 .login_form button {
   border-radius: 4px;
   height: 50px;
-  margin-bottom: 40px;
 }
 .login_form .btn-log {
   font-family: 'Nunito', sans-serif;
   font-size: 19px;
   font-weight: bold;
   height: 55px;
+}
+.login_form .row button{
+  margin-bottom: 40px;
 }
 .login_form .btn-fpswd{
   color: #c75533;
@@ -12060,4 +12063,7 @@ textarea.form-control{
 }
 #popular_course_item{
   transition: 1s ease-in-out;
+}
+#model-close  span{
+  font-size: 18px;
 }

@@ -4,6 +4,6 @@
 
 $this->title = 'Mening kurslarim';
 ?>
-<div class="site-index">
+<div class="row">
     <h1> Salom Admin</h1>
 </div>

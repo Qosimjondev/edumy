@@ -26,3 +26,6 @@ $('.owl-next').click(function() {
 $('.owl-prev').click(function() {
     owl.trigger('prev.owl.carousel');
 });
+
+
+

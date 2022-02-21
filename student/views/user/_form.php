@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\bootstrap4\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\UserInfo */
+/* @var $model common\models\Info */
 /* @var $form yii\bootstrap4\ActiveForm */
 ?>
 

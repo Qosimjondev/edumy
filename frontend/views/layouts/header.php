@@ -35,56 +35,36 @@ use yii\helpers\Url;
                                     <div class="content-vertical home5">
                                         <ul id="vertical-menu" class="mega-vertical-menu nav navbar-nav">
                                             <li><a href="#">IT va dasturlash <b class="caret"></b></a>
-                                                <div class="element-wrapper">
-                                                    <div class="title-wrapper">
-                                                        <div class="element-wrapper-title">Topics</div>
-                                                    </div>
-                                                    <div class="widget-nav-menu">
-                                                        <div class="element-list-wrapper wn-menu">
-                                                            <ul class="element-menu-list">
-                                                                <li><a href="#">Color</a></li>
-                                                                <li><a href="#">Digital Painting</a></li>
-                                                                <li><a href="#">Drawing</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="element-warapper-btn">
-                                                        <a href="#"><div class="element-wrapper-sub-title">See All <i class="flaticon-right-arrow-1"></i></div></a>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li><a href="#">Komputer grafikasi</a></li>
-                                            <li><a href="#">Moliya va biznes</a></li>
-                                            <li>
-                                                <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Design <b class="caret"></b></a>
-                                                <div class="dropdown-menu vertical-megamenu" style="width: 748px;">
+                                                <div class="dropdown-menu" style="width: 300px;height: auto; padding:5px;">
                                                     <div class="dropdown-menu-inner">
                                                         <div class="element-inner">
                                                             <div class="element-section-wrap">
                                                                 <div class="element-container">
                                                                     <div class="element-row">
-                                                                        <div class="col-lg-7">
-                                                                            <div class="row">
-                                                                                <div class="col-lg-6">
-                                                                                    <div class="element-wrapper">
-                                                                                        <div class="title-wrapper">
-                                                                                            <div class="element-wrapper-title">Topics</div>
-                                                                                        </div>
-                                                                                        <div class="widget-nav-menu">
-                                                                                            <div class="element-list-wrapper wn-menu">
-                                                                                                <ul class="element-menu-list">
-                                                                                                    <li><a href="#">Color</a></li>
-                                                                                                    <li><a href="#">Digital Painting</a></li>
-                                                                                                    <li><a href="#">Drawing</a></li>
-                                                                                                </ul>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="element-warapper-btn">
-                                                                                            <a href="#"><div class="element-wrapper-sub-title">See All <i class="flaticon-right-arrow-1"></i></div></a>
-                                                                                        </div>
+                                                                        <div class="col-lg-12">
+                                                                            <div class="element-wrapper">
+                                                                                <div class="widget-nav-menu">
+                                                                                    <div class="element-list-wrapper wn-menu">
+                                                                                        <ul class="element-menu-list">
+                                                                                            <li>
+                                                                                                <a href="/course/all?sub-category=web-dasturlash">Web dasturlash</a>
+                                                                                            </li>
+                                                                                            <li>
+                                                                                                <a href="/course/all?sub-category=mobil-dasturlash">Mobil dasturlash</a>
+                                                                                            </li>
+                                                                                            <li>
+                                                                                                <a href="/course/all?sub-category=desktop-dasturlash">Desktop dasturlash</a>
+                                                                                            </li>
+                                                                                        </ul>
                                                                                     </div>
                                                                                 </div>
-
+                                                                                <div class="element-warapper-btn" style="margin-bottom: 17px">
+                                                                                    <a href="/course/all?category=it-va-dasturlash">
+                                                                                        <div class="element-wrapper-sub-title">
+                                                                                            Barcha kurslar                                                                                                    <i class="flaticon-right-arrow-1"></i>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -93,6 +73,50 @@ use yii\helpers\Url;
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </li>
+                                            <li><a href="#">Komputer grafikasi <b class="caret"></b></a>
+                                                <div class="dropdown-menu" style="width: 300px;height: auto; padding:5px;">
+                                                    <div class="dropdown-menu-inner">
+                                                        <div class="element-inner">
+                                                            <div class="element-section-wrap">
+                                                                <div class="element-container">
+                                                                    <div class="element-row">
+                                                                        <div class="col-lg-12">
+                                                                            <div class="element-wrapper">
+                                                                                <div class="widget-nav-menu">
+                                                                                    <div class="element-list-wrapper wn-menu">
+                                                                                        <ul class="element-menu-list">
+                                                                                            <li>
+                                                                                                <a href="/course/all?sub-category=web-dasturlash">Web dasturlash</a>
+                                                                                            </li>
+                                                                                            <li>
+                                                                                                <a href="/course/all?sub-category=mobil-dasturlash">Mobil dasturlash</a>
+                                                                                            </li>
+                                                                                            <li>
+                                                                                                <a href="/course/all?sub-category=desktop-dasturlash">Desktop dasturlash</a>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="element-warapper-btn" style="margin-bottom: 17px">
+                                                                                    <a href="/course/all?category=it-va-dasturlash">
+                                                                                        <div class="element-wrapper-sub-title">
+                                                                                            Barcha kurslar                                                                                                    <i class="flaticon-right-arrow-1"></i>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li><a href="#">Moliya va biznes</a></li>
+                                            <li>
+                                                <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Xorijiy tillar</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -122,12 +146,12 @@ use yii\helpers\Url;
 
             <ul id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">
                 <?php if(Yii::$app->user->isGuest): ?>
-                <li class="last">
-                <a href="<?=Url::to(['site/signup'])?>"><i class="flaticon-edit"></i> Ro'yxatdan O'tish</a>
-                </li>
-                <li class="list_five">
-                    <a href="<?=Url::to(['site/login'])?>"><i class="flaticon-user"></i> Kirish</a>
-                </li>
+                    <li class="last">
+                        <a href="<?=Url::to(['site/signup'])?>"><i class="flaticon-edit"></i> Ro'yxatdan O'tish</a>
+                    </li>
+                    <li class="list_five">
+                        <a href="<?=Url::to(['site/login'])?>"><i class="flaticon-user"></i> Kirish</a>
+                    </li>
                 <?php else: ?>
                 <li class="list_two">
                     <a href="<?=Url::to(['site/logout'])?>" data-method="post"><span class="title">Chiqish</span></a>

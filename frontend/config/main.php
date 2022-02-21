@@ -12,6 +12,9 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
+        'headercomponent'=>[
+            'class'=>'frontend\components\HeaderComponent'
+        ],
         'request' => [
             'csrfParam' => '_csrf-frontend',
             'baseUrl'=>'',

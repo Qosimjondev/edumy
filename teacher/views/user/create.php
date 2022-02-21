@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\UserInfo */
+/* @var $model common\models\Info */
 
 $this->title = 'Create User Info';
 $this->params['breadcrumbs'][] = ['label' => 'User Infos', 'url' => ['index']];

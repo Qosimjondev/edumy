@@ -4,7 +4,7 @@ namespace student\controllers;
 
 use common\models\User;
 use Yii;
-use common\models\UserInfo;
+use common\models\Info;
 use yii\base\Security;
 use yii\bootstrap4\Alert;
 use yii\data\ActiveDataProvider;
@@ -15,7 +15,7 @@ use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
 
 /**
- * UserController implements the CRUD actions for UserInfo model.
+ * UserController implements the CRUD actions for Info model.
  */
 class UserController extends Controller
 {
@@ -38,7 +38,7 @@ class UserController extends Controller
     }
 
     /**
-     * Lists all UserInfo models.
+     * Lists all Info models.
      *
      * @return string
      */
@@ -50,7 +50,7 @@ class UserController extends Controller
 
 
     /**
-     * Displays a single UserInfo model.
+     * Displays a single Info model.
      * @param int $id ID
      * @return string
      * @throws NotFoundHttpException if the model cannot be found
@@ -63,13 +63,13 @@ class UserController extends Controller
     }
 
     /**
-     * Creates a new UserInfo model.
+     * Creates a new Info model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return string|\yii\web\Response
      */
     public function actionCreate()
     {
-        $model = new UserInfo();
+        $model = new Info();
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
@@ -85,7 +85,7 @@ class UserController extends Controller
     }
 
     /**
-     * Updates an existing UserInfo model.
+     * Updates an existing Info model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param int $id ID
      * @return string|\yii\web\Response
@@ -115,7 +115,7 @@ class UserController extends Controller
     {
         $Oldmodel=$this->findModel($id);
         $user=User::findOne(['id'=>$Oldmodel->user_id]);
-        $model=new UserInfo();
+        $model=new Info();
         if($model->load(\Yii::$app->request->post()) && $model->validate())
         {
             $sec=new Security();
@@ -133,7 +133,7 @@ class UserController extends Controller
         return $this->render('password',['model'=>$model]);
     }
     /**
-     * Deletes an existing UserInfo model.
+     * Deletes an existing Info model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param int $id ID
      * @return \yii\web\Response
@@ -147,15 +147,15 @@ class UserController extends Controller
     }
 
     /**
-     * Finds the UserInfo model based on its primary key value.
+     * Finds the Info model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param int $id ID
-     * @return UserInfo the loaded model
+     * @return Info the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = UserInfo::findOne(['id' => $id])) !== null) {
+        if (($model = Info::findOne(['id' => $id])) !== null) {
             return $model;
         }
 

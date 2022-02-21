@@ -1,6 +1,6 @@
 <?php
 
-/* @var  \common\models\UserInfo $model */
+/* @var  \common\models\Info $model */
 
 use yii\grid\GridView;
 use yii\helpers\Html;
