@@ -6,8 +6,8 @@ $this->title="Search Course|".Yii::$app->name;
 
 /* @var $dataProvider yii\data\ActiveDataprovider */
 ?>
-<div class="col-lg-12">
-<h1>Found Courses:</h1>
+<div class="search-course">
+<h3>Found Courses:</h3>
 <?php
 echo ListView::widget([
     'dataProvider'=>$dataProvider,

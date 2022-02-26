@@ -15,19 +15,19 @@ use yii\helpers\Url;
                                         <div class="element-list-wrapper wn-menu">
                                             <ul class="element-menu-list">
                                                 <li>
-                                                    <a href="<?= Url::to(['/site/all-courses','id'=>1])?>">Web dasturlash</a>
+                                                    <a href="<?= Url::to(['/course/all-courses','id'=>1])?>">Web dasturlash</a>
                                                 </li>
                                                 <li>
-                                                    <a href="<?= Url::to(['/site/all-courses','id'=>2])?>">Mobil dasturlash</a>
+                                                    <a href="<?= Url::to(['/course/all-courses','id'=>2])?>">Mobil dasturlash</a>
                                                 </li>
                                                 <li>
-                                                    <a href="<?= Url::to(['/site/all-courses','id'=>3])?>">Desktop dasturlash</a>
+                                                    <a href="<?= Url::to(['/course/all-courses','id'=>3])?>">Desktop dasturlash</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="element-warapper-btn" style="margin-bottom: 17px">
-                                        <a href="<?= Url::to(['/site/all-course'])?>">
+                                        <a href="<?= Url::to(['/course/all-course'])?>">
                                             <div class="element-wrapper-sub-title">
                                                 Barcha kurslar                                                                                                    <i class="flaticon-right-arrow-1"></i>
                                             </div>
@@ -55,19 +55,25 @@ use yii\helpers\Url;
                                         <div class="element-list-wrapper wn-menu">
                                             <ul class="element-menu-list">
                                                 <li>
-                                                    <a href="<?= Url::to(['/site/all-courses','id'=>4])?>">Web dasturlash</a>
+                                                    <a href="<?= Url::to(['/course/all-courses','id'=>4])?>">Web Dizayn </a>
                                                 </li>
                                                 <li>
-                                                    <a href="<?= Url::to(['/site/all-courses','id'=>5])?>">Mobil dasturlash</a>
+                                                    <a href="<?= Url::to(['/course/all-courses','id'=>5])?>">Branding</a>
                                                 </li>
                                                 <li>
-                                                    <a href="<?= Url::to(['/site/all-courses','id'=>6])?>">Desktop dasturlash</a>
+                                                    <a href="<?= Url::to(['/course/all-courses','id'=>6])?>">Motion grafika</a>
+                                                </li>
+                                                <li>
+                                                    <a href="<?= Url::to(['/course/all-courses','id'=>7])?>">Modellashtirish</a>
+                                                </li>
+                                                <li>
+                                                    <a href="<?= Url::to(['/course/all-courses','id'=>8])?>">Video montaj</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="element-warapper-btn" style="margin-bottom: 17px">
-                                        <a href="<?= Url::to(['/site/all-course'])?>">
+                                        <a href="<?= Url::to(['/course/all-course'])?>">
                                             <div class="element-wrapper-sub-title">
                                                 Barcha kurslar                                                                                                    <i class="flaticon-right-arrow-1"></i>
                                             </div>
@@ -82,9 +88,9 @@ use yii\helpers\Url;
         </div>
     </div>
 </li>
-<li><a href="#">Moliya va biznes</a></li>
+<li><a href="<?= Url::to(['/course/finance'])?>">Moliya va biznes</a></li>
 <li>
-    <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Xorijiy tillar</a>
+    <a href="<?= Url::to(['/course/flanguage'])?>" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Xorijiy tillar</a>
 </li>
 
 

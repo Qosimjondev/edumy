@@ -20,8 +20,8 @@ use yii\helpers\Url;
         </div>
         <div class="details">
             <div class="tc_content">
-                <p><?= $model->course_author?></p>
-                <h5><?= $model->course_title ?></h5>
+                <p class="text-center"><?= $model->course_author?></p>
+                <h5 class="text-center"><?= $model->course_title ?></h5>
                 <ul class="tc_review">
                     <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
                     <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>

@@ -38,7 +38,7 @@ class CourseController extends Controller
     {
         $query=Course::find()
             ->with('createdBy')
-            ->published()
+            ->latest()
             ->orderBy(['created_at'=>SORT_DESC]);
         if($search)
         {
@@ -50,5 +50,37 @@ class CourseController extends Controller
         return $this->render('search',[
             'dataProvider'=>$dataProvider
         ]);
+    }
+    public function actionAllCourses($id)
+    {
+        $query=Course::find()
+            ->latest();
+            if($id){
+              $query->byCategory($id);
+            }
+        $dataProvider=new ActiveDataProvider([
+            'query' => $query
+        ]);
+        return $this->render('allcourses',[
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    public function actionAllCourse()
+    {
+        $query=Course::find()
+            ->latest();
+        $dataProvider=new ActiveDataProvider([
+            'query'=>$query
+        ]);
+
+        return $this->render('allcourse',[
+            'dataProvider' => $dataProvider
+        ]);
+    }
+    public function actionFinance()
+    {
+        $query=Course::find()
+            ->finance();
     }
 }

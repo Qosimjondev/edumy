@@ -12100,3 +12100,15 @@ textarea.form-control{
 .card-body h6 {
   font-size: 15px;
 }
+.search-course
+{
+  width: 100%;
+  min-height: 400px;
+  padding-left:120px;
+  padding-top: 60px;
+}
+.search-course h1
+{
+  font-weight: 800;
+  font-size:25px ;
+}
