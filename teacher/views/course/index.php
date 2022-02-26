@@ -7,7 +7,7 @@ use yii\widgets\ListView;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Playlists';
+$this->title = 'Course';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="col-lg-12">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <h1><?= Html::encode($this->title) ?></h1>
 
         <p>
-            <?= Html::a('Create Playlist', ['create'], ['class' => 'btn btn-success']) ?>
+            <?= Html::a('Create Course', ['create'], ['class' => 'btn btn-success']) ?>
         </p>
 
         <?=ListView::widget([

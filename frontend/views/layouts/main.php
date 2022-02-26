@@ -4,10 +4,12 @@
 
 
 use frontend\assets\MainAsset;
+use frontend\widgets\navwidget\NavWidget;
 use yii\bootstrap4\Html;
 use yii\bootstrap4\Breadcrumbs;
 use frontend\assets\IeAsset;
 use yii\helpers\Url;
+
 
 
 MainAsset::register($this);
@@ -56,7 +58,7 @@ IeAsset::register($this);
 
         <?= $this->render("header") ?>
         <?= $this->render('modal.php') ?>
-        <?= $this->render("navmobile") ?>
+        <?= NavWidget::widget(); ?>
         <?php if (Yii::$app->controller->route == 'site/index'): ?>
             <?= $this->render('slider') ?>;
         <?php else: ?>

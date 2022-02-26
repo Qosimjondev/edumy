@@ -5,6 +5,7 @@ namespace frontend\controllers;
 use common\models\Course;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
+use frontend\widgets\dropwidget\DropWidget;
 use Yii;
 use yii\base\InvalidArgumentException;
 use yii\data\ActiveDataProvider;
@@ -78,6 +79,7 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
+
         $dataProvider=new ActiveDataProvider([
             'query'=>Course::find(),
         ]);

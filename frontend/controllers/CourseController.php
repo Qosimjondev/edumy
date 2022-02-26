@@ -9,21 +9,21 @@ use yii\web\Controller;
 
 class CourseController extends Controller
 {
-    public function behaviors()
-    {
-        return [
-            [
-                'class'=>AccessControl::class,
-                'rules'=>[
-                    [
-                        'actions'=>['index'],
-                        'allow'=>true,
-                        'roles'=>['@']
-                    ]
-                ]
-            ],
-        ];
-    }
+//    public function behaviors()
+//    {
+//        return [
+//            [
+//                'class'=>AccessControl::class,
+//                'rules'=>[
+//                    [
+//                        'actions'=>['index'],
+//                        'allow'=>true,
+//                        'roles'=>['@']
+//                    ]
+//                ]
+//            ],
+//        ];
+//    }
 
     public function actionIndex()
     {
@@ -32,5 +32,23 @@ class CourseController extends Controller
             'query'=>$query,
         ]);
        return $this->render('index',['dataProvider'=>$dataProvider]);
+    }
+
+    public function actionSearch($search)
+    {
+        $query=Course::find()
+            ->with('createdBy')
+            ->published()
+            ->orderBy(['created_at'=>SORT_DESC]);
+        if($search)
+        {
+          $query->byKeyword($search);
+        };
+        $dataProvider=new ActiveDataProvider([
+            'query'=>$query
+        ]);
+        return $this->render('search',[
+            'dataProvider'=>$dataProvider
+        ]);
     }
 }
