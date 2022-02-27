@@ -18,10 +18,10 @@ use yii\helpers\Url;
                                                     <a href="<?= Url::to(['/course/all-courses','id'=>1])?>">Web dasturlash</a>
                                                 </li>
                                                 <li>
-                                                    <a href="<?= Url::to(['/course/all-courses','id'=>2])?>">Mobil dasturlash</a>
+                                                    <a href="<?= Url::to(['/course/all-courses','id'=>2])?>">Desktop dasturlash</a>
                                                 </li>
                                                 <li>
-                                                    <a href="<?= Url::to(['/course/all-courses','id'=>3])?>">Desktop dasturlash</a>
+                                                    <a href="<?= Url::to(['/course/all-courses','id'=>3])?>">Mobil dasturlash</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -88,9 +88,9 @@ use yii\helpers\Url;
         </div>
     </div>
 </li>
-<li><a href="<?= Url::to(['/course/finance'])?>">Moliya va biznes</a></li>
+<li><a href="<?= Url::to(['/course/all-courses','id'=>9])?>">Moliya va biznes</a></li>
 <li>
-    <a href="<?= Url::to(['/course/flanguage'])?>" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Xorijiy tillar</a>
+    <a href="<?= Url::to(['/course/flanguage',' id' =>10])?>" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Xorijiy tillar</a>
 </li>
 
 

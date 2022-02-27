@@ -13,7 +13,7 @@ use yii\helpers\Url;
     </div>
     <div class="card-body" style="text-align: center">
         <h5 class="card-title" style="font-size: 1.25rem"><?= $model->course_title ?></h5>
-        <p class="text-muted"><?= $model->getCourseCateg()->c_name ?></p>
+        <p class="text-muted"><?= $model->courseCateg->c_name ?></p>
         <h6><span class="flaticon-user"></span> <?= $model->course_author ?></h6>
         <div class="card-buttons">
             <a href="<?= Url::to(['playlist/information','id'=>$model->id])?>" class="btn btn-success">Ma'lumotlar</a>
