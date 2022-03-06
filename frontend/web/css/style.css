@@ -12112,3 +12112,26 @@ textarea.form-control{
   font-weight: 800;
   font-size:25px ;
 }
+#pager
+{
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+#pager .pager_ul
+{
+  text-align: center;
+  height: 70px;
+}
+#pager .pager_ul .prev, #pager .pager_ul .next
+{
+  display: inline-block;
+  border: 1px solid orangered;
+  border-radius: 50%;
+  padding: 12px;
+}
+#pagination-pager
+{
+  width: 100%;
+  position: relative;
+}

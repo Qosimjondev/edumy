@@ -90,7 +90,7 @@ use yii\helpers\Url;
 </li>
 <li><a href="<?= Url::to(['/course/all-courses','id'=>9])?>">Moliya va biznes</a></li>
 <li>
-    <a href="<?= Url::to(['/course/flanguage',' id' =>10])?>" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Xorijiy tillar</a>
+    <a href="<?= Url::to(['/course/all-courses','id'=>10])?>" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Xorijiy tillar</a>
 </li>
 
 

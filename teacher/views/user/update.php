@@ -10,7 +10,6 @@ $this->params['breadcrumbs'][] = ['label' => 'User Infos', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
-<div class="col-lg-12">
 <div class="user-info-update">
 
     <h3><?= Html::encode($this->title) ?></h3>
@@ -19,5 +18,4 @@ $this->params['breadcrumbs'][] = 'Update';
         'model' => $model,
     ]) ?>
 
-</div>
 </div>

@@ -33,7 +33,9 @@ AppAsset::register($this);
                 <div class="container-fluid">
                     <div class="main_content_container">
                         <div class="row">
-                            <?= $content?>
+                            <div class="col-lg-12">
+                                <?= $content?>
+                            </div>
                         </div>
 
                     </div>

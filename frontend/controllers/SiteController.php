@@ -3,12 +3,15 @@
 namespace frontend\controllers;
 
 use common\models\Course;
+use common\models\Group;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use frontend\widgets\dropwidget\DropWidget;
 use Yii;
 use yii\base\InvalidArgumentException;
 use yii\data\ActiveDataProvider;
+use yii\db\Query;
+use yii\db\QueryBuilder;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;

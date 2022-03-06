@@ -6,39 +6,41 @@ $this->title = 'Dashboard';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
-    <div class="ff_one">
-        <div class="icon"><span class="flaticon-speech-bubble"></span></div>
-        <div class="detais">
-            <p>Messages</p>
-            <div class="timer">45</div>
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        <div class="ff_one">
+            <div class="icon"><span class="flaticon-speech-bubble"></span></div>
+            <div class="detais">
+                <p>Messages</p>
+                <div class="timer">45</div>
+            </div>
         </div>
     </div>
-</div>
-<div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
-    <div class="ff_one style2">
-        <div class="icon"><span class="flaticon-rating"></span></div>
-        <div class="detais">
-            <p>Reviews</p>
-            <div class="timer">567</div>
+    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        <div class="ff_one style2">
+            <div class="icon"><span class="flaticon-rating"></span></div>
+            <div class="detais">
+                <p>Reviews</p>
+                <div class="timer">567</div>
+            </div>
         </div>
     </div>
-</div>
-<div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
-    <div class="ff_one style3">
-        <div class="icon"><span class="flaticon-online-learning"></span></div>
-        <div class="detais">
-            <p>Courses</p>
-            <div class="timer">2,589</div>
+    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        <div class="ff_one style3">
+            <div class="icon"><span class="flaticon-online-learning"></span></div>
+            <div class="detais">
+                <p>Courses</p>
+                <div class="timer">2,589</div>
+            </div>
         </div>
     </div>
-</div>
-<div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
-    <div class="ff_one style4">
-        <div class="icon"><span class="flaticon-like"></span></div>
-        <div class="detais">
-            <p>Bookmarks</p>
-            <div class="timer">27</div>
+    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        <div class="ff_one style4">
+            <div class="icon"><span class="flaticon-like"></span></div>
+            <div class="detais">
+                <p>Bookmarks</p>
+                <div class="timer">27</div>
+            </div>
         </div>
     </div>
 </div>

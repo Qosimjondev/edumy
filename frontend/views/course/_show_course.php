@@ -3,19 +3,37 @@
 use yii\helpers\Url;
 /* @var $model \common\models\Course */
 ?>
-<div class="col-md-4">
-    <div class="card m-4">
-        <div class="card-img">
-            <img src="<?= '/frontend/web/uploads/poster/'.$model->course_poster ?>" class="card-img-top" alt="card_img">
+<div class="item mb-4">
+    <div class="top_courses home2 mb0">
+        <div class="thumb">
+            <img class="img-whp" src="<?= '/frontend/web/uploads/poster/'.$model->course_poster ?>" alt="<?= $model->course_title?>">
+            <div class="overlay">
+                <div class="tag">Best Seller</div>
+                <div class="icon"><span class="flaticon-like"></span></div>
+                <a class="tc_preview_course" href="#">Preview Course</a>
+            </div>
         </div>
-        <div class="card-body" style="text-align: center">
-            <h5 class="card-title" style="font-size: 1.25rem"><?= $model->course_title ?></h5>
-            <p class="text-muted"><?= $model->courseCateg->c_name ?></p>
-            <h6><span class="flaticon-user"></span> <?= $model->course_author ?></h6>
-            <div class="card-buttons">
-                <a href="<?= Url::to(['playlist/information','id'=>$model->id])?>" class="btn btn-success">Ma'lumotlar</a>
-                <a href="<?= Url::to(['playlist/start','id'=>$model->id])?>" class="btn btn-primary">Boshlash</a>
-                <a href="<?= Url::to(['/course/update','id'=>$model->id])?>" class="btn btn-warning">Update</a>
+        <div class="details">
+            <div class="tc_content">
+                <p class="text-center"><?= $model->course_author?></p>
+                <h5 class="text-center"><?= $model->course_title ?></h5>
+                <ul class="tc_review">
+                    <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
+                    <li class="list-inline-item"><a href="#">(6)</a></li>
+                </ul>
+            </div>
+            <div class="tc_footer">
+                <ul class="tc_meta float-left">
+                    <li class="list-inline-item"><a href="#"><i class="flaticon-profile"></i></a></li>
+                    <li class="list-inline-item"><a href="#">1548</a></li>
+                    <li class="list-inline-item"><a href="#"><i class="flaticon-comment"></i></a></li>
+                    <li class="list-inline-item"><a href="#">25</a></li>
+                </ul>
+                <div class="tc_price float-right"><?= $model->course_price ?></div>
             </div>
         </div>
     </div>

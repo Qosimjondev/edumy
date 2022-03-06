@@ -76,6 +76,11 @@ class CourseController extends Controller
         if ($this->request->isPost) {
             if ($model->load($this->request->post())) {
                 $model->imageFile=UploadedFile::getInstance($model,'imageFile');
+                if(!($model->imageFile))
+                {
+                    throw new NotFoundHttpException("Rasm yuklanmadi,formani tekshirib qaytadan  to'lidiring.");
+                    die();
+                }
                 $name=$this->getSecurity();
                 $imagePath=\Yii::getAlias('@frontend').'/web/uploads/poster/'.$name.'.'.$model->imageFile->extension;
                 $model->imageFile->saveAs($imagePath);
@@ -161,22 +166,23 @@ class CourseController extends Controller
     {
         $model = $this->findModel($id);
         $oldImg=$model->course_poster;
-        if ( $model->load($this->request->post())) {
+        if ($model->load($this->request->post())) {
             $model->imageFile=UploadedFile::getInstance($model,'imageFile');
-            if($model->imageFile)
-            {
-                $name=$this->getSecurity();
-                $extension=$model->imageFile->extension;
-                $imagePath=\Yii::getAlias('@frontend').'/web/uploads/poster/'.$name.'.'.$model->imageFile->extension;
+            if($model->imageFile) {
+                $name = $this->getSecurity();
+                $extension = $model->imageFile->extension;
+                $imagePath = \Yii::getAlias('@frontend') . '/web/uploads/poster/' . $name . '.' . $model->imageFile->extension;
                 $model->imageFile->saveAs($imagePath);
-                Image::resize($imagePath,307,200,false,['quality'=>80])->save();
-                $model->course_poster=$name.'.'.$extension;
-                if(!empty($oldImg))
-                {
-                    unlink(\Yii::getAlias('@frontend').'/web/uploads/poster/'.$oldImg);
+                Image::resize($imagePath, 307, 200, false, ['quality' => 80])->save();
+                $model->course_poster = $name . '.' . $extension;
+                if($model->save(false)) {
+                    if (!empty($oldImg)) {
+                        unlink(\Yii::getAlias('@frontend') . '/web/uploads/poster/' . $oldImg);
+                    }
                 }
-                $model->save(false);
             }
+
+
             return $this->redirect(['view', 'id' => $model->id]);
         }
     }

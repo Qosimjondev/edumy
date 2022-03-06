@@ -54,12 +54,21 @@ class CourseController extends Controller
     public function actionAllCourses($id)
     {
         $query=Course::find()
+            ->with('courseCateg')
             ->latest();
             if($id){
               $query->byCategory($id);
             }
         $dataProvider=new ActiveDataProvider([
-            'query' => $query
+            'query' => $query,
+            'pagination' =>[
+                'pageSize' => 6
+            ],
+            'sort' => [
+                'defaultOrder' =>[
+                    'created_at' => SORT_DESC
+                ]
+            ]
         ]);
         return $this->render('allcourses',[
             'dataProvider' => $dataProvider,

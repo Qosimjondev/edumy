@@ -19,14 +19,14 @@ use yii\helpers\Url;
         <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars pr10"></i> Dashboard Navigation</button>
             <ul id="myDropdown" class="dropdown-content">
-                <li><a href="#"><span class="flaticon-puzzle-1"></span> Dashboard</a></li>
-                <li><a href="#"><span class="flaticon-online-learning"></span> My Courses</a></li>
-                <li class="active"><a href="#"><span class="flaticon-shopping-bag-1"></span> Order</a></li>
+                <li><a href="<?= Url::to(['/site/index'])?>"><span class="flaticon-puzzle-1"></span> Dashboard</a></li>
+                <li><a href="<?= Url::to(['/course/index'])?>"><span class="flaticon-online-learning"></span> My Courses</a></li>
+                <li class="active"><a href="<?= Url::to(['/video/index'])?>"><span class="flaticon-elearning-1"></span> Order</a></li>
                 <li><a href="#"><span class="flaticon-speech-bubble"></span> Messages</a></li>
                 <li><a href="#"><span class="flaticon-rating"></span> Reviews</a></li>
                 <li><a href="#"><span class="flaticon-like"></span> Bookmarks</a></li>
-                <li><a href="<?= Url::to(['video/create'])?>>"><span class="flaticon-pencil"></span> Video</a></li>
-                <li><a href="<?= Url::to(['course/create'])?>"><span class="flaticon-add-contact"></span> Add listing</a></li>
+                <li><a href="<?= Url::to(['video/create'])?>>"><span class="flaticon-pencil"></span> Add Video</a></li>
+                <li><a href="<?= Url::to(['course/create'])?>"><span class="flaticon-add-contact"></span> Add Course</a></li>
             </ul>
         </div>
     </div>
